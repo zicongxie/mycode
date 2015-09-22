@@ -1,0 +1,146 @@
+.n-left ul{
+	border: 1px solid #dbdbdb;
+	height: 548px;
+	margin-top: 0;
+	padding: 0;
+}
+.n-left ul .n-left-f-li{
+	background: #3489CF;
+	color: #fff;
+	font-size: 18px;
+}
+.n-left ul .n-left-f-li:hover{
+	background: #3489CF;
+	color: #fff;
+	font-size: 18px;
+}
+.n-right{
+	height: auto;
+	padding-bottom: 30px;
+}
+.n-right ul{
+	margin-top: -20px;
+}
+.n-right li{
+	font-size: 16px;
+	height: 48px;
+	width: auto;
+	padding: 0 5px;
+	line-height: 48px;
+	border-bottom: 1px dashed #aaa;
+	color: #333;
+}
+.n-right li span{
+	display: inline-block;
+}
+.n-right li .span-color{
+	color: #277fc7;
+	width: 175px;
+}
+.n-right li .span-w2{
+	width: 125px;
+}
+.n-right li .span-w3{
+	width: 265px;
+}
+.n-right li .span-w4{
+	width: 110px;
+}
+
+.pages, .pages .go .p-btn, .pages .go .txt, .tac {
+  text-align: center;
+}
+.pt20 {
+  padding-top: 20px;
+}
+.mt20 {
+  margin-top: 20px;
+}
+div {
+  display: block;
+}
+.cf {
+  zoom: 1;
+}
+.prev {
+  height: 35px;
+  line-height: 35px;
+  color: #333;
+  text-decoration: none;
+}
+.pages{display: block;margin: 0 auto;margin-left: 20px;}
+.pages a.active, .pages a:hover:not(.dot) {
+  background: #55b0f5;
+  border-color: #55b0f5;
+  color: #fff;
+}
+.pages .num {
+  width: 35px;
+  margin-left: -1px;
+  height: 35px;
+  line-height: 35px;
+  color: #333;
+  text-decoration: none;
+}
+.pages .dot, .pages .next, .pages .prev, .sidebar .list .bd li {
+  padding: 0 10px;
+}
+.button, .dib, .filter .hd .opt, .icon, .label, .nav a, .pages .dot, .pages .next, .pages .num, .pages .prev, .select i, .sort .checkbox i, .sort .item, .sort .simple-page a, .tag {
+  display: inline-block;
+}
+.pages .next, .pages .num, .pages .prev {
+  height: 35px;
+  line-height: 35px;
+  color: #333;
+  text-decoration: none;
+}
+.pages .dot, .pages .next, .pages .prev, .sidebar .list .bd li {
+  padding: 0 10px;
+}
+.pages .go{
+  padding-left: 10px;
+  color: #999;
+  font-size: 12px;
+}
+.pages .go .txt {
+  z-index: 0;
+  line-height: 24px;
+}
+.b, .filter .hd .opt, .header .cf, .input-text, .pages .dot, .pages .go .p-btn, .pages .go .txt, .pages .next, .pages .num, .pages .prev, .select, .select ul, .tag {
+  border: 1px solid #e1e1e1;
+}
+.list-house .item, .list-house .item .img, .nav .fr, .pages .go .txt, .rel, .search .select, .select {
+  position: relative;
+}
+.footer, .pages, .pages .go .p-btn, .pages .go .txt, .tac {
+  text-align: center;
+}
+.pages .go .p-btn {
+  height: 24px;
+  width: 50px;
+  background: #fff;
+  border: none;
+  color: #333;
+  border: 1px solid #ddd;
+  margin-left: 70px;
+  cursor: pointer;
+  -webkit-transform: translate(-66px);
+  -moz-transform: translate(-66px);
+  -ms-transform: translate(-66px);
+  -o-transform: translate(-66px);
+  transform: translate(-66px);
+}
+.pages .go .p-btn:hover{
+	background: #55b0f5;
+	color: #fff;
+	border-color: #55b0f5;
+}
+.pages .go .txt {
+  width: 42px;
+  height: 24px;
+  -webkit-transition: transform .5s;
+  -moz-transition: transform .5s;
+  -ms-transition: transform .5s;
+  -o-transition: transform .5s;
+  transition: transform .5s;
+}

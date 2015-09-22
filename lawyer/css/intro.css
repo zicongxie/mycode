@@ -1,0 +1,35 @@
+.n-left ul{
+	border: 1px solid #dbdbdb;
+	height: 548px;
+	margin-top: 0;
+	padding: 0;
+}
+.n-left ul .n-left-f-li{
+	background: #3489CF;
+	color: #fff;
+	font-size: 18px;
+}
+.n-left ul .n-left-f-li:hover{
+	background: #3489CF;
+	color: #fff;
+	font-size: 18px;
+}
+.n-right .intro-right-title{
+	line-height: 40px;
+	border-bottom: 1px dashed #aaa; 
+	margin-bottom: 20px;
+	text-align: center;
+	padding-top: 20px;
+}
+.n-right .intro-right-title p{
+	font-size: 14px;
+	color: #999;
+	display: block;
+	margin-top: -12px;
+}
+.n-right .right-main p{
+	line-height: 28px;
+	font-size: 16px;
+	color: #333;
+	margin-bottom:32px;
+}

@@ -1,0 +1,101 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+```html
+<!-- `display: block` sprite -->
+<div class="icon-home"></div>
+
+<!-- `display: inline-block` sprite -->
+<img class="icon-home" />
+```
+*/
+.icon-eight {
+  background-image: url(../images/sprite.png?1436941420794);
+  background-position: -1000px 0px;
+  width: 355px;
+  height: 138px;
+}
+.icon-gongju {
+  background-image: url(../images/sprite.png?1436941420794);
+  background-position: -501px 0px;
+  width: 489px;
+  height: 327px;
+}
+.icon-kua {
+  background-image: url(../images/sprite.png?1436941420794);
+  background-position: 0px -617px;
+  width: 600px;
+  height: 237px;
+}
+.icon-kua1 {
+  background-image: url(../images/sprite.png?1436941420794);
+  background-position: -1138px -563px;
+  width: 128px;
+  height: 128px;
+}
+.icon-kua2 {
+  background-image: url(../images/sprite.png?1436941420794);
+  background-position: -1000px -563px;
+  width: 128px;
+  height: 128px;
+}
+.icon-kua3 {
+  background-image: url(../images/sprite.png?1436941420794);
+  background-position: -1218px -148px;
+  width: 128px;
+  height: 128px;
+}
+.icon-logo {
+  background-image: url(../images/sprite.png?1436941420794);
+  background-position: 0px -985px;
+  width: 506px;
+  height: 85px;
+}
+.icon-no {
+  background-image: url(../images/sprite.png?1436941420794);
+  background-position: -610px -617px;
+  width: 298px;
+  height: 173px;
+}
+.icon-no1 {
+  background-image: url(../images/sprite.png?1436941420794);
+  background-position: -1000px -148px;
+  width: 208px;
+  height: 237px;
+}
+.icon-no2 {
+  background-image: url(../images/sprite.png?1436941420794);
+  background-position: -501px -337px;
+  width: 279px;
+  height: 208px;
+}
+.icon-no3 {
+  background-image: url(../images/sprite.png?1436941420794);
+  background-position: -1000px -395px;
+  width: 299px;
+  height: 158px;
+}
+.icon-prompt {
+  background-image: url(../images/sprite.png?1436941420794);
+  background-position: -1218px -286px;
+  width: 43px;
+  height: 25px;
+}
+.icon-riji {
+  background-image: url(../images/sprite.png?1436941420794);
+  background-position: 0px -864px;
+  width: 640px;
+  height: 111px;
+}
+.icon-title-bg {
+  background-image: url(../images/sprite.png?1436941420794);
+  background-position: -516px -985px;
+  width: 400px;
+  height: 59px;
+}
+.icon-xiaoming {
+  background-image: url(../images/sprite.png?1436941420794);
+  background-position: 0px 0px;
+  width: 491px;
+  height: 607px;
+}

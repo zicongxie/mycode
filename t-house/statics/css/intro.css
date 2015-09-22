@@ -1,0 +1,80 @@
+html{	
+	width: 100%;
+	background: #1b224b url(../images/bg_intro.jpg?v=111) no-repeat top center;
+}
+.nav .nav_li1{
+	background: url(../images/nav_1.png) no-repeat 60px 6px;
+}
+.nav .nav_li1:hover{
+	color: #f4b807;
+	background: url(../images/y_nav_1.png) no-repeat 56px 6px;
+}
+.nav .nav_li2{
+	background: url(../images/nav_2.png) no-repeat 25px 4px;
+}
+.nav .nav_li2:hover{
+	color: #f4b807;
+	background: url(../images/y_nav_2.png) no-repeat 25px;
+}
+.nav .nav_li3{
+	color: #f4b807;
+	background: url(../images/y_nav_3.png) no-repeat 40px;
+}
+.nav .nav_li3:hover{
+	color: #f4b807;
+	background: url(../images/y_nav_3.png) no-repeat 40px;
+}
+.nav .nav_li4{
+	background: url(../images/nav_4.png) no-repeat 40px;
+	border:0; 
+}
+.nav .nav_li4:hover{
+	color: #f4b807;
+	background: url(../images/y_nav_4.png) no-repeat 40px;
+}
+.content{
+	clear: both;
+	float: left;
+	width: 960px;
+	margin-top:15px;
+	padding: 25px 20px;
+	font-family: Microsoft YaHei;
+}
+.content p{
+	margin: 0;
+}
+.content .c-h1{
+	font-size: 30px;
+	margin:5px 0 15px 0;
+	color: #eeb30a;
+}
+.content .c-h2{
+	font-size: 20px;
+	margin-bottom: 10px;
+	color: #eeb30a;
+}
+.content .c-h3{
+	font-size: 16px;
+	color: #fff;
+	margin-bottom: 25px;
+	font-family: Microsoft YaHei;
+}
+.content .c-h3{
+	font-size: 16px;
+	margin-bottom: 25px;
+	line-height: 25px;
+}
+.content .c-pre{
+	font-size: 16px;
+	color: #ffeebc;
+	margin-top: -20px;
+	margin-bottom: 25px;
+	line-height: 25px;
+}
+.content a{
+	color: #eeb30a; 
+}
+.content a:hover{
+	color: #eeb34a;
+	text-decoration: underline; 
+}

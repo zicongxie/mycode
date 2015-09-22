@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>	
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telphone=no, email=no" />
+	<script>
+	var ratio = window.devicePixelRatio || 1;
+	var w = screen.width * ratio;
+	var clientWidth = w > 750 ? 750 : 640;
+	var phoneScale = parseInt(window.screen.width)/ clientWidth;
+	document.write('<meta name="viewport" content="width='+clientWidth+', minimum-scale = '+ phoneScale +', maximum-scale = '+ phoneScale +', target-densitydpi=device-dpi">'); 
+	</script>
+	<title>topic-list</title>
+	<meta name="keywords" content=""/>
+	<link rel="stylesheet" href="./statics/css/xzmui.min.css">
+	<script type="text/javascript" src="./statics/js/zepto.min.js"></script>
+	<script type="text/javascript" src="./statics/js/waterfall.js"></script>
+	<link rel="stylesheet" href="./statics/css/style.css">
+</head>
+<body>
+	<div class="ui-wrapper">
+		<header class="ui-header">
+			<a class="ui-header-link ui-header-back" href="javascript:window.history.go(-1);"></a>
+			<h1 class="ui-header-title topic-header"></h1>
+		</header>
+		<div class="ui-top">
+			<div class="left"><img src="./statics/images/topic-user.png" alt=""></div>
+			<div class="center">
+				<p>在路上的风景</p>
+				<p><span>帖子&nbsp;64546</span><span>感兴趣&nbsp;6456</span></p>
+			</div>
+			<div class="right"><button class="ui-btn ui-btn-success btn-success">感兴趣</button></div>
+		</div>
+		<div class="ui-tip">
+			<div class="ui-list ui-list-arrows">
+				<a class="ui-list-item" href="#">
+					<div class="ui-list-title">
+					<button class="ui-btn ui-btn-inline ui-btn-warning btn-warning">话题活动</button>身体和心灵，总要有一样在路上
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="ui-h-20"></div>
+		<div class="list" id="list">
+			<dl>
+				<dt>
+					<img src="./statics/images/topic-img-1.png" alt="">
+				</dt>
+				<dd>
+					<p>身体和心灵身体和心灵身体和心灵身体和心灵身体和心灵身体和心灵</p>
+					<p><span>西门庆</span><span>10分钟前</span></p>
+				</dd>
+				<div class="view">21021</div>
+			</dl>
+			<dl>
+				<dt>
+					<img src="./statics/images/topic-img-2.png" alt="">
+				</dt>
+				<dd>
+					<p>从容，忘我，无我。</p>
+					<p><span>西门庆</span><span>10分钟前</span></p>
+				</dd>
+				<div class="view">21021</div>
+			</dl>
+			<dl>
+				<dt>
+					<img src="./statics/images/topic-img-3.png" alt="">
+				</dt>
+				<dd>
+					<p>从容，忘我，无我。</p>
+					<p><span>西门庆</span><span>10分钟前</span></p>
+				</dd>
+				<div class="view">21021</div>
+			</dl>
+			<dl>
+				<dt>
+					<img src="./statics/images/topic-img-2.png" alt="">
+				</dt>
+				<dd>
+					<p>从容，忘我，无我。</p>
+					<p><span>西门庆</span><span>10分钟前</span></p>
+				</dd>
+				<div class="view">21021</div>
+			</dl>
+			<dl>
+				<dt>
+					<img src="./statics/images/topic-img-2.png" alt="">
+				</dt>
+				<dd>
+					<p>从容，忘我，无我。</p>
+					<p><span>西门庆</span><span>10分钟前</span></p>
+				</dd>
+				<div class="view">21021</div>
+			</dl>
+			<dl>
+				<dt>
+					<img src="./statics/images/topic-img-2.png" alt="">
+				</dt>
+				<dd>
+					<p>从容，忘我，无我。</p>
+					<p><span>西门庆</span><span>10分钟前</span></p>
+				</dd>
+				<div class="view">21021</div>
+			</dl>
+			<dl>
+				<dt>
+					<img src="./statics/images/topic-img-1.png" alt="">
+				</dt>
+				<dd>
+					<p>从容，忘我，无我。</p>
+					<p><span>西门庆</span><span>10分钟前</span></p>
+				</dd>
+				<div class="view">21021</div>
+			</dl>
+			<dl>
+				<dt>
+					<img src="./statics/images/topic-img-2.png" alt="">
+				</dt>
+				<dd>
+					<p>从容，忘我，无我。</p>
+					<p><span>西门庆</span><span>10分钟前</span></p>
+				</dd>
+				<div class="view">21021</div>
+			</dl>
+			<dl>
+				<dt>
+					<img src="./statics/images/topic-img-3.png" alt="">
+				</dt>
+				<dd>
+					<p>从容，忘我，无我。</p>
+					<p><span>西门庆</span><span>10分钟前</span></p>
+				</dd>
+				<div class="view">21021</div>
+			</dl>
+			<dl>
+				<dt>
+					<img src="./statics/images/topic-img-1.png" alt="">
+				</dt>
+				<dd>
+					<p>从容，忘我，无我。</p>
+					<p><span>西门庆</span><span>10分钟前</span></p>
+				</dd>
+				<div class="view">21021</div>
+			</dl>
+			<dl>
+				<dt>
+					<img src="./statics/images/topic-img-2.png" alt="">
+				</dt>
+				<dd>
+					<p>从容，忘我，无我。</p>
+					<p><span>西门庆</span><span>10分钟前</span></p>
+				</dd>
+				<div class="view">21021</div>
+			</dl>
+			<dl>
+				<dt>
+					<img src="./statics/images/topic-img-3.png" alt="">
+				</dt>
+				<dd>
+					<p>从容，忘我，无我。</p>
+					<p><span>西门庆</span><span>10分钟前</span></p>
+				</dd>
+				<div class="view">21021</div>
+			</dl>
+			<dl>
+				<dt>
+					<img src="./statics/images/topic-img-2.png" alt="">
+				</dt>
+				<dd>
+					<p>从容，忘我，无我。</p>
+					<p><span>西门庆</span><span>10分钟前</span></p>
+				</dd>
+				<div class="view">21021</div>
+			</dl>
+			<dl>
+				<dt>
+					<img src="./statics/images/topic-img-2.png" alt="">
+				</dt>
+				<dd>
+					<p>分支是用来将特性开发绝缘开来的分支是用来将特性开发绝缘开来的分支是用来将特性开发绝缘开来的</p>
+					<p><span>西门庆</span><span>10分钟前</span></p>
+				</dd>
+				<div class="view">21021</div>
+			</dl>
+			<dl>
+				<dt>
+					<img src="./statics/images/topic-img-2.png" alt="">
+				</dt>
+				<dd>
+					<p>从容，忘我，无我。</p>
+					<p><span>西门庆</span><span>10分钟前</span></p>
+				</dd>
+				<div class="view">21021</div>
+			</dl>
+			<dl>
+				<dt>
+					<img src="./statics/images/topic-img-1.png" alt="">
+				</dt>
+				<dd>
+					<p>从容，忘我，无我。</p>
+					<p><span>西门庆</span><span>10分钟前</span></p>
+				</dd>
+				<div class="view">21021</div>
+			</dl>
+			<dl>
+				<dt>
+					<img src="./statics/images/topic-img-2.png" alt="">
+				</dt>
+				<dd>
+					<p>从容，忘我，无我。</p>
+					<p><span>西门庆</span><span>10分钟前</span></p>
+				</dd>
+				<div class="view">21021</div>
+			</dl>
+			<dl>
+				<dt>
+					<img src="./statics/images/topic-img-3.png" alt="">
+				</dt>
+				<dd>
+					<p>从容，忘我，无我。</p>
+					<p><span>西门庆</span><span>10分钟前</span></p>
+				</dd>
+				<div class="view">21021</div>
+			</dl>
+		</div>
+		<div class="pic-bottom" id="pic-bottom">
+			<div class="left">
+				<p>下载西子圈</p>
+				<p>查看更多精彩内容</p>
+			</div>
+			<div class="right"><button class="ui-btn ui-btn-inline ui-btn-success" data-href="">打开APP</button></div>
+			<div class="close" id="close" ></div>
+		</div>
+	</div>
+
+<script>
+	$(document).ready(function(){
+	    $('#close').one('click',function(){
+	    	$('#pic-bottom').hide();
+	    });
+	});
+	window.onload=function(){
+	    $('#list>dl>dd').each(function(){
+			var Op=$(this).find('p').eq(0);
+			if (Op.height()>=70) {
+				Op.addClass('limit-height');
+				/*var relHeight=$(this).parent('dl').height()+Op.height()-70;
+				$(this).parent('dl').css('height',relHeight);*/
+			};
+		});
+
+	    var waterfall=new Waterfall({
+	    	Hbottom : 32,
+	    	id     : 'list'
+	    });	
+	    $('#pic-bottom').show();
+	};
+
+</script>
+</body>
+</html>

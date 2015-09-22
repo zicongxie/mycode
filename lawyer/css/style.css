@@ -1,0 +1,64 @@
+/*left middle right:*/
+.left{ width: 310px; float: left; height: auto;}
+.middle{ width: 380px; float: left; margin-left:15px; height: auto; }
+.right{ width: 280px; float: right; height: auto;}
+/*right-detail*/
+.m-right-top{
+	width: 100%;
+	height: 188px;
+}
+.m-right-bottom{
+	width: 100%;
+	height: 258px;
+}
+/*foot*/
+.foot{ height: 290px; padding: 20px 0 60px 0;}
+.foot-title{ border-bottom:1px solid #277fc7; height: 42px; line-height: 42px; }
+.foot-title strong{ font-size: 16px; color: #277fc7; width: 115px; }
+.foot-title span{ float: right; }
+
+/*slide css */
+.slideBox{position:relative; border:1px solid #ddd;  }
+.slideBox .hd{ height:35px; overflow:hidden; position:absolute; margin: 0 auto; bottom:-35px; z-index:1; }
+.slideBox .hd ul{width:310px; zoom:1;background-color: #fff;}
+.slideBox .hd ul li{display: inline-block; margin-right:1px;  width:76.5px; height:29px; line-height:29px; text-align:center; background:url(../images/s_n_bg.jpg) repeat-x;margin-top: 1px; cursor:pointer; color: #fff;}
+.slideBox .hd ul li.on{ background:#fff url(../images/s_bg.png);height:29px; color:#fff;}
+.slideBox .bd{ position:relative; z-index:0;   }
+.slideBox .bd li{ zoom:1; vertical-align:middle; }
+.slideBox .bd img{ width:310px; height:230px; display:block;  }
+
+.slide-text{
+	position: absolute;
+	height: 30px;
+	width: 100.8%;
+	text-align: center;
+	line-height: 30px;
+	font-size: 14px;
+	z-index: 3;
+	background: #bbbdba;
+	opacity: 0.85;
+	color: #fff;
+	bottom: 0;
+}
+
+
+/* 本例子css */
+.picMarquee-left{ overflow:hidden; position:relative;    }
+.picMarquee-left .hd{ overflow:hidden;  height:30px; background:#f4f4f4; padding:0 10px;  }
+.picMarquee-left .bd{ padding:10px;   }
+.picMarquee-left .bd ul{ overflow:hidden; zoom:1; }
+.picMarquee-left .bd ul li{ margin:0 8px; float:left; _display:inline; overflow:hidden; text-align:center; padding:6px;   }
+.picMarquee-left .bd ul li:hover{border: 1px solid #aad4f6;padding:5px;   }
+.picMarquee-left .bd ul li .pic{ text-align:center; }
+.picMarquee-left .bd ul li .pic img{ width:auto; height:155px; display:block;}
+.picMarquee-left .bd ul li .pic a:hover img{ border-color:#999;  }
+.picMarquee-left .bd ul li .title{ line-height:24px;   }
+.tempWrap{width: 100% !important;}
+.picMarquee-left .list-title{
+	width: 238px;
+	text-align: left;
+}
+
+		
+		
+

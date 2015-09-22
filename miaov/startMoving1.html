@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>startMoving</title>
+	<style>
+		#div1{width: 100px;height: 100px;background: green;color: #fff;text-align: center;line-height: 100px;position: absolute;left: 800px;}
+		#lt{border-right: 1px solid #aaa;height: 500px;width: 0;position: absolute;left: 500px;}
+	</style>
+</head>
+<script type="text/javascript">
+	function startMoving (iSpeed,iTarget) {
+	var div1=document.getElementById('div1'),
+		timer=null;
+		clearInterval(timer);
+		if (div1.offsetLeft>iTarget) iSpeed=-iSpeed;
+		timer=setInterval(function(){
+			if(Math.abs(div1.offsetLeft-iTarget)<Math.abs(iSpeed)){
+				div1.style.left='500px';
+				clearInterval(timer);				
+			}
+			else{
+				div1.style.left=div1.offsetLeft+iSpeed+'px';
+			}
+			console.log(div1.offsetLeft);
+		},30);		
+	}
+	window.onload=function(){
+		startMoving(7,500);
+	};
+</script>
+<body>
+	<div id="div1">Div1</div>
+	<div id="lt"></div>
+</body>
+</html>

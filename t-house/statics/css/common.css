@@ -1,0 +1,78 @@
+body{
+	width: 1000px;
+	margin: 0 auto;
+	font-family: Microsoft YaHei;
+}
+#fix_tips_box li{
+  margin: 0;
+  padding: 0;
+  word-wrap: break-word;
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+#fix_tips_box ul{
+  margin: 0;
+  padding: 0;
+  word-wrap: break-word;
+  font-size: 12px;
+}
+#fix_tips_box em{  font-style: normal;}
+ul{margin-top: 0;}
+.b-bottom{clear: both;height: 70px;}/*尾部*/
+*{margin:0; padding:0; list-style:none; }
+a{text-decoration: none;border: 0;}
+.header{
+	margin-top: 50px;
+	color: #fff;
+	width: 1000px;
+	height: 50px;
+}
+.header span{
+	margin-left: -5px;
+	margin-right: 50px;
+	font-size: 45px;
+	height: auto;
+}
+.header img{border: none;}
+.header .d_img{
+	display: inline-block;
+	height: 50px;
+	line-height: 50px;
+	position: relative;
+	float: right;
+	margin-right: 80px;
+
+}
+.nav{
+	margin-top: 430px;
+	height: auto;
+}
+.nav ul{line-height: 70px;}
+.nav ul li{
+	list-style-type: none;
+	line-height: 70px;
+	width: 248px;
+	height: 70px;
+	text-align: center;
+	display: inline-block;
+	border-right:1px solid #000; 
+	cursor: pointer;
+	float: left;
+	color: #fff;
+	font-size: 24px;
+}
+.form-control pre{
+	font-size: 21px;
+}
+.re-top{
+	width: 70px;
+	height: 70px;
+	text-align: center;
+	background: url('../images/re_top.png');
+	color: #fff;
+	position: fixed;
+	bottom: 200px;
+	right: 250px;
+	cursor: pointer;
+	display: none;
+}

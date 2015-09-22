@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>	
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telphone=no, email=no" />
+	<script>
+	var ratio = window.devicePixelRatio || 1;
+	var w = screen.width * ratio;
+	var clientWidth = w > 750 ? 750 : 640;
+	var phoneScale = parseInt(window.screen.width)/ clientWidth;
+	document.write('<meta name="viewport" content="width='+clientWidth+', minimum-scale = '+ phoneScale +', maximum-scale = '+ phoneScale +', target-densitydpi=device-dpi">'); 
+	</script>
+	<title>topic-list</title>
+	<meta name="keywords" content=""/>
+	<link rel="stylesheet" href="./statics/css/xzmui.min.css">
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.js"></script>
+	<script type="text/javascript" src="./statics/js/waterfall.js"></script>
+	<link rel="stylesheet" href="./statics/css/style.css">
+	<style>
+	.container-fluid {
+	  padding: 20px;
+
+	}
+	.box {
+	  margin-bottom: 20px;
+	  float: left;
+	  width: 220px;
+	}
+	.box img {
+	  max-width: 100%;
+	}
+
+	</style>
+</head>
+<body>
+	<div class="ui-wrapper">
+		<header class="ui-header">
+			<a class="ui-header-link ui-header-back" href="javascript:window.history.go(-1);"></a>
+			<h1 class="ui-header-title">在路上的风景</h1>
+		</header>
+		<div class="ui-top">
+			<div class="left"><img src="./statics/images/topic-user.png" alt=""></div>
+			<div class="center">
+				<p>在路上的风景</p>
+				<p><span>帖子&nbsp;64546</span><span>感兴趣&nbsp;6456</span></p>
+			</div>
+			<div class="right"><button class="ui-btn ui-btn-success btn-success">感兴趣</button></div>
+		</div>
+		<div class="ui-tip">
+			<div class="ui-list ui-list-arrows">
+				<a class="ui-list-item" href="#">
+					<div class="ui-list-title">
+					<button class="ui-btn ui-btn-inline ui-btn-warning btn-warning">话题活动</button>身体和心灵，总要有一样在路上
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="container-fluid" id="masonry">
+			<dl class="box">
+				<dt>
+					<img src="./statics/images/topic-img-1.png" alt="">
+				</dt>
+				<dd>
+			</dl>
+			<dl class="box">
+				<dt>
+					<img src="./statics/images/topic-img-2.png" alt="">
+				</dt>
+			</dl>
+			<dl class="box">
+				<dt>
+					<img src="./statics/images/topic-img-3.png" alt="">
+				</dt>
+			</dl>
+			<dl class="box">
+				<dt>
+					<img src="./statics/images/topic-img-2.png" alt="">
+				</dt>
+			</dl>
+			<dl class="box">
+				<dt>
+					<img src="./statics/images/topic-img-2.png" alt="">
+				</dt>
+			</dl>
+			<dl class="box">
+				<dt>
+					<img src="./statics/images/topic-img-2.png" alt="">
+				</dt>
+			</dl>
+			<dl class="box">
+				<dt>
+					<img src="./statics/images/topic-img-1.png" alt="">
+				</dt>
+			</dl>
+			<dl class="box">
+				<dt>
+					<img src="./statics/images/topic-img-2.png" alt="">
+				</dt>
+			</dl>
+			<dl class="box">
+				<dt>
+					<img src="./statics/images/topic-img-3.png" alt="">
+				</dt>
+			</dl>
+		</div>
+		<div class="pic-bottom" id="pic-bottom">
+			<div class="left">
+				<p>下载西子圈</p>
+				<p>查看更多精彩内容</p>
+			</div>
+			<div class="right"><button class="ui-btn ui-btn-inline ui-btn-success" data-href="">打开APP</button></div>
+			<div class="close" id="close"></div>
+		</div>
+	</div>
+
+<script>
+/*	$(document).ready(function(){
+
+	    $('#close').one('click',function(){
+	    	$('#pic-bottom').hide();
+	    });
+	});
+	window.onload=function(){
+	    var waterfall=new Waterfall({
+	    	Hbottom : 32,
+	    	id     : 'list'
+	    });	
+	};
+
+	var $grid = $('#list').imagesLoaded( function() {
+		    var waterfall=new Waterfall({
+		    	Hbottom : 32,
+		    	id     : 'list'
+		    });
+		});*/
+$(function(){
+	var $container = $('#masonry');
+	$container.imagesLoaded( function(){
+		$container.masonry({
+			itemSelector : '.box',
+			gutterWidth : 20,
+			isAnimated: true,
+		});
+	});
+});
+
+</script>
+</body>
+</html>
