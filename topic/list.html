@@ -29,7 +29,7 @@
 				<p>在路上的风景</p>
 				<p><span>帖子&nbsp;64546</span><span>感兴趣&nbsp;6456</span></p>
 			</div>
-			<div class="right"><button class="ui-btn ui-btn-success btn-success">感兴趣</button></div>
+			<div class="right"><a href="http://xizi.com"  class="ui-btn ui-btn-success btn-success">感兴趣</a></div>
 		</div>
 		<div class="ui-tip">
 			<div class="ui-list ui-list-arrows">
@@ -214,15 +214,20 @@
 			</dl>
 			<dl>
 				<dt>
-					<img src="./statics/images/topic-img-3.png" alt="">
+				    <a href="" style="display:block;" >
+                        <img src="./statics/images/topic-img-3.png" alt="">
+					</a>
 				</dt>
+				<a href="" style="display:block;">
 				<dd>
 					<p>从容，忘我，无我。</p>
 					<p><span>西门庆</span><span>10分钟前</span></p>
 				</dd>
+				</a>
 				<div class="view">21021</div>
 			</dl>
 		</div>
+		<a href="http://xizi.com" style="display:block;">
 		<div class="pic-bottom" id="pic-bottom">
 			<div class="left">
 				<p>下载西子圈</p>
@@ -231,12 +236,14 @@
 			<div class="right"><button class="ui-btn ui-btn-inline ui-btn-success" data-href="">打开APP</button></div>
 			<div class="close" id="close" ></div>
 		</div>
+		</a>
 	</div>
 
 <script>
 	$(document).ready(function(){
-	    $('#close').one('click',function(){
+	    $('#close').one('click',function(e){
 	    	$('#pic-bottom').hide();
+            return false;
 	    });
 	});
 	window.onload=function(){

@@ -55,6 +55,7 @@
 	background: #99db5e;
 	width: 140px;
 	height: 60px;
+    line-height: 60px;
 	color: #fff;
 	font-size: 28px;
 	border-color: #99db5e;
@@ -192,4 +193,7 @@
 .limit-height{
 	height: 69px !important;
 	overflow: hidden;
+}
+.href{
+    display: block;
 }
