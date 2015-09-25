@@ -1,4 +1,4 @@
-	    var  Waterfall=function(opts){
+var  Waterfall=function(opts){
 	    	var defaults={
 	    		Hbottom:30,
 	    		id: null 

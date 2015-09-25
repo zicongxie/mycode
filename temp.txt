@@ -1,0 +1,68 @@
+	<script>	
+	var endActive = function(opts){
+		var defaults = {
+			endtime: '2015-09-25-14-30',
+			id:'end-active',
+			alertMsg:{
+				title:'提示',
+				content:'对不起，活动已经结束！'
+			}
+		};
+		this.opts=$.extend(defaults,opts);
+		console.log(this.opts);
+		return this.init();
+	};	
+	endActive.prototype = {
+		init:function(){
+			return this.runTime();
+		},
+		resolveTime:function(){
+			var objArr=this.opts.endtime.split('-');
+			if (objArr.length==5) {
+				var oEndTime=new Date(objArr[0],objArr[1],objArr[2],objArr[3],objArr[4]);
+			}else{
+				alert('error:参数\'endtime\'初始化错误！');
+				return false;
+			}
+			return oEndTime;
+		},
+		runTime:function(){
+			var _this=this;
+			var oEndTime=_this.resolveTime(),t;
+			setInterval(function(){
+				var	oNowTime=new Date();
+				t = oEndTime.getTime()-oNowTime.getTime();
+				_this.seconds = Math.round(t/1000);
+				var timeNum=_this.timeToNum();
+				return timeNum;				
+			}, 5000);
+
+		},
+		timeToNum:function(seconds){
+			seconds==null?seconds=this.seconds:seconds;
+			var days=Math.floor(seconds/86400);
+			var hours=Math.floor((seconds-86400*days)/3600);
+			var minutes=Math.floor((seconds-86400*days-3600*hours)/60);
+			var second=Math.floor(seconds-86400*days-3600*hours-60*minutes);
+			return {
+				days : days,
+			    hours : hours,
+			  minutes : minutes,
+			   seconds : second
+			};
+		}
+
+	};
+	new endActive();
+
+
+/*		$('#end-active').click(function(){
+			var alertDialog=xzmui.dialog({
+				title: '提示',
+				content:'对不起，活动已经结束！'
+			});
+			alertDialog.show();
+			return false;
+		});*/
+	</script>
+	<!-- 结束活动 -->
