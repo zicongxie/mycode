@@ -1,3 +1,6 @@
+.ui-list-title{
+  font-size: 28px;
+}
 .ui-header-back {
     position: absolute;
     background: url(../images/header-back.png) no-repeat center;
@@ -130,7 +133,7 @@
 	right: 10px;
 }
 .list dl .view{
-	background:rgba(255,255,255,.35) url(../images/view.png) left center no-repeat;
+	background:rgba(255,255,255,.35) url(../images/view.png) 5px center no-repeat;
 	position: absolute;
 	top: 9px;
 	right: 10px;
@@ -138,7 +141,7 @@
 	height: 20px;
 	color: #fff;
 	font-size: 16px;
-	padding-left: 25px;
+	padding-left: 30px;
 	border-radius: 20px;
 	line-height: 20px;
 	overflow: hidden;
@@ -176,7 +179,7 @@
 }
 .pic-bottom .right button{
 	background: #99db5e;
-	border-color: #74be33; 
+	border-color: #74be33;
 	width: 140px;
 	height: 60px;
 	padding: 0 5px;
