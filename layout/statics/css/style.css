@@ -1,0 +1,29 @@
+body{
+	width: 100%;
+}
+*{margin:0;padding: 0;}
+.lay-container{
+	background: gray;
+	font-size: 0;
+}
+.lay-left{
+	width: 30%;
+	height: auto;
+	min-height: 800px;
+	background: #d1d1d1;
+	display: inline-block;
+}
+.lay-center{
+	width: 40%;
+	height: auto;
+	min-height: 800px;
+	background: #fff;
+	display: inline-block;
+}
+.lay-right{
+	width: 30%;
+	height: auto;
+	min-height: 800px;
+	background: #d1d1d1;
+	display: inline-block;
+}

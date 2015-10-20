@@ -21,12 +21,10 @@ Waterfall.prototype = {
 		Odl.eq(0).css({
 			'top': 0,
 			'left': this.opts.paddingLR,
-			'opacity': '1'
 		});
 		Odl.eq(1).css({
 			'top': 0,
-			'right': this.opts.paddingLR,
-			'opacity': '1'
+			'right': this.opts.paddingLR
 		});
 		this.odd = Odl.eq(0).height() + this.opts.Hbottom;
 		this.even = Odl.eq(1).height() + this.opts.Hbottom;
@@ -41,15 +39,13 @@ Waterfall.prototype = {
 			if (this.odd < this.even) {
 				Odl.eq(i).css({
 					'top': this.odd + 'px',
-					'left': this.opts.paddingLR,
-					'opacity': '1'
+					'left': this.opts.paddingLR
 				});
 				this.odd = parseInt(this.odd) + Odl.eq(i).height() + this.opts.Hbottom; //奇数
 			} else {
 				Odl.eq(i).css({
 					'top': this.even + 'px',
-					'right': this.opts.paddingLR,
-					'opacity': '1'
+					'right': this.opts.paddingLR
 				});
 				this.even += (Odl.eq(i).height() + this.opts.Hbottom); //偶数
 			}
