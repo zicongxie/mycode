@@ -1,0 +1,41 @@
+@import "../statics/css/normalize.css";
+body{
+	width: 100%;
+}
+*{margin:0;padding: 0;}
+.lay-container{
+	background: gray;
+	font-size: 0;
+}
+.lay-left{
+	width: 30%;
+	height: auto;
+	min-height: 800px;
+	background: #d1d1d1;
+	display: inline-block;
+}
+.lay-center{
+	width: 69%;
+	height: auto;
+	min-height: 800px;
+	background: #fff;
+	display: inline-block;
+}
+@media screen and (max-width:750px){
+	.lay-tab{
+		
+	}
+	.lay-left{
+		width: 100%;
+		display: block;
+		min-height: 250px;
+	}
+	.lay-center{
+		width: 100%;
+		display: block;
+	}
+	.lay-right{
+		width: 0;
+		height: 0;
+	}
+}
