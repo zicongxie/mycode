@@ -1,48 +1,84 @@
-var popup=function(opts){
-  var defaults={
-    css:{
-      mainColor:'#FFC600',
-      bgColor:'#fff',
-      borderColor:'#fff'
-    },
-    title:'投票成功',
-    content:['恭喜您为您支持的作品投上一票','支持的作品投上一票'],
-    buttonText:'快去花积分，赢取奖励吧！',
-    text:'',
-    href:'#'
+function popup(config) {
+ var oShadow = document.getElementById('shadow'),
+  oClose = attrGetObj('id', 'close'),
+  oPop = attrGetObj('pop'),
+  oId = attrGetObj('id'),
+  oTemp;
+ for (var i = 0; i < oPop.length; i++) {
+  oPop[i].onclick = function() {
+   for (var j = 0; j < oId.length; j++) {
+    if (oId[j].getAttribute('id') == this.getAttribute('pop')) {
+     shadowToggle(oId[j], 55);
+     makeCenter(oId[j]);
+     oTemp = oId[j];
+    };
+   };
   };
-  this.opts=$.extend(defaults,opts);
-  this.opts.text=this.opts.content[0];
-  for (var i = 1; i < this.opts.content.length; i++) {
-    this.opts.text+='<br>'+this.opts.content[i];
+ };
+ for (var k = 0; k < oClose.length; k++) {
+  oClose[k].onclick = oShadow.onclick = function() {
+   shadowToggle(oTemp, 0);
   };
-};
-popup.prototype={
-  init:function(){
-    this.tpl='<div class="shadow"></div>'+
-            '<div class="popup" id="popup" style="background:'+this.opts.css.bgColor+'">'+
-            '<div class="title" style="color:'+this.opts.css.bgColor+';border-color:'+this.opts.css.borderColor+'">'+this.opts.title+'</div>'+
-            '<div class="content" style="color:'+this.opts.css.mainColor+'">'+this.opts.text+'</div>'+
-            '<a href="'+this.opts.href+'" class="ui-btn ui-btn-warning" style="background:'+this.opts.css.mainColor+';color:'+this.opts.css.bgColor+'">'+this.opts.buttonText+'</a>'+
-          '</div>';
-    $('body').append(this.tpl);
-    this.shadow=$('.shadow');
-    this.popup=$('#popup');
-    return this.close();
-    return this.show();
-  },
-  close:function(){
-    var _=this;
-    this.shadow.click(function(){
-      _.popup.remove();
-      _.shadow.css({'opacity':0});
-      setTimeout(function(){
-        _.shadow.remove();
-      },800);
-    });
-  },
-  show:function(opts){
-    this.opts=$.extend(this.opts,opts);
-    return this.init();
+ };
+}
+/*
+ *@param:object obj //需要开关的Dom
+ */
+function shadowToggle(obj, opacityTarget) {
+ var oShadow = document.getElementById('shadow');
+ oShadow.aleft = obj.offsetLeft;
+ if (oShadow.aleft > -1000) {
+  // moveSlow(oShadow,opacityTarget);
+  // oShadow.style.left='999999px';
+  obj.style.left = '-999999px';
+  oShadow.style.left = '999999px';
+  oShadow.style.opacity = 0;
+  oShadow.style.filter = 'alpha(opacity=0)';
+
+ } else {
+  oShadow.style.left = '0';
+  oShadow.style.opacity = 0.55;
+  oShadow.style.filter = 'alpha(opacity=55)';
+  // moveSlow(oShadow,opacityTarget);
+ }
+}
+/*function moveSlow (obj,target) {
+	var opac;
+	clearInterval(obj.timer);
+	obj.timer=setInterval(function(){
+	obj.speed=(obj.style.opacity*100-target)/8;
+	obj.speed=obj.speed>0?Math.ceil(obj.speed):Math.floor(obj.speed);
+	if (parseInt(obj.style.opacity*100)==target){
+		if (obj.aleft>-1000) {
+		obj.style.display='none';
+		}
+		clearInterval(obj.timer);
+	}else{
+		opac=Math.floor(obj.style.opacity*10000)/100-obj.speed;
+		 console.log(obj.speed);
+		obj.style.opacity=opac/100;
+		obj.style.filter='alpha(opacity='+opac+')';
+	}
+	},10);
+}*/
+function attrGetObj(attr, value) {
+ var returnArr = [],
+  oDoc = document.getElementsByTagName('*');
+ for (var p = 0; p < oDoc.length; p++) {
+  if (value == null) {
+   if (oDoc[p].getAttribute('' + attr + '') != null)
+    returnArr.push(oDoc[p]);
+  } else {
+   if (oDoc[p].getAttribute('' + attr + '') == value)
+    returnArr.push(oDoc[p]);
   }
-};
+ };
+ return returnArr;
+}
+
+function makeCenter(obj) {
+ obj.style.marginLeft = -(obj.offsetWidth / 2) + 'px';
+ obj.style.marginTop = -(obj.offsetHeight / 2) + 'px';
+ obj.style.left = '50%';
+ obj.style.top = '50%';
+}
