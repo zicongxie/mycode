@@ -1,0 +1,22 @@
+body{
+	color: #666;
+}
+.img-list{
+	width: 100%;
+	padding: 20px;
+	background: #f5f5f5;
+	font-size: 0;
+}
+.img-list li{
+	margin:20px 10px;
+	padding: 20px;
+	background: #fff;
+	display: inline-block;
+	font-size: 14px;
+}
+.img-list li img{
+	opacity: .3;
+	width: 240px;
+	height: 360px;
+	-webkit-transition:all 1s ease;
+}
