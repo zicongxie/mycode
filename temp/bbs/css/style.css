@@ -1,0 +1,342 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    margin: 0 auto;
+    -webkit-touch-callout: none;
+    font-family: "Microsoft YaHei","Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 1.6;
+    background-color: #f3f3f3;
+}
+
+.lt-ie9 body{
+    width: 700px;
+    padding: 20px 20px 0;
+}
+
+.lt-ie9 header h2{
+    padding-bottom: 10px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #e7e7eb;
+}
+
+a {
+    color: #607fa6;
+    text-decoration: none;
+}
+.icons{width:24px}
+
+img{
+    border: none 0;
+}
+
+mark{
+    background: none;
+    color: #607fa6;
+}
+
+main{
+    display: block;
+    padding: 10px 15px 15px;
+    overflow: hidden;
+    font-size: 16px;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #fff;
+    _zoom: 1;
+}
+
+header h2{
+    margin-bottom: 12px;
+    line-height: 1.4;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+meta-list{
+    display: block;
+    margin-bottom: 28px;
+    overflow: hidden;
+    line-height: 20px;
+    color: #8c8c8c;
+}
+
+meta-list *{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+meta-copyright{
+    width: 47px;
+    height: 18px;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid #8c8c8c;
+    text-align: center;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+thumb{
+    display: block;
+}
+
+thumb img{
+    width: 100%;
+}
+
+article{
+    color: #3e3e3e;
+    font-size: 18px;
+}
+
+article img{
+    height: auto !important;
+    max-width: 100% !important
+}
+
+p{
+    clear: both;
+    min-height: 1em;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+p + p:not(:empty){
+    margin-top: 1em;
+}
+
+like{
+    display: block;
+    margin-top: 40px;
+}
+
+like .button{
+    display: block;
+    height: 30px;
+    width: 80px;
+    margin: 0 auto 15px;
+    color: #fff;
+    background-color: #D15B48;
+    text-align: center;
+    line-height: 30px;
+    font-size: 15px;
+    border-radius: 8px 8px 8px 8px;
+    overflow: hidden;
+    background-clip: padding-box;
+}
+
+like h3{
+    margin-bottom: 5px;
+    color: #8c8c8c;
+    font-weight: normal;
+    text-align: center;
+    font-size: 15px;
+}
+
+
+like-count{
+    display: block;
+    text-align: center;
+    color: #8c8c8c;
+}
+
+like-list{
+    position: relative;
+    left: 3px;
+    display: block;
+    margin: 8px auto 0;
+    width: 245px;
+    overflow: hidden;
+    _zoom: 1;
+    _left: 5px;
+    _width: 250px;
+}
+
+like-list a{
+    float: left;
+    margin:0 5px 5px 0;
+    height: 30px;
+    width: 30px;
+}
+
+like-list img{
+    height: 30px;
+    width: 30px;
+}
+
+footer{
+    overflow: hidden;
+    padding-top: 15px;
+    line-height: 32px;
+    color: #8c8c8c;
+    _zoom: 1;
+}
+
+.view-source,
+.article-meta{
+    float: left;
+    margin-right: 10px;
+}
+
+.report-article{
+    color: #8c8c8c;
+}
+
+.meta-praise{
+    padding-left: 20px;
+}
+
+.lt-ie9 .meta-praise{
+    background: url(icons/praise-small.png) no-repeat 0 9px;
+}
+
+.lt-ie7 .meta-praise{
+    background-image: url(icons/praise-small.gif);
+}
+
+.h5-support .meta-praise{
+    /*background: url(./icons/praise.png) no-repeat 0 7px;*/
+    background-size: 15px 15px;
+}
+
+.report-article{
+    float: right;
+    margin-left: 10px;
+}
+
+comments{
+    position: relative;
+    display: block;
+    padding-top: 30px;
+    color: #8c8c8c;
+}
+
+aside{
+    display: block;
+}
+
+.comments-header{
+    position: relative;
+    margin: 0 20px;
+    text-align: center;
+}
+
+.comments-header:before{
+    content: '';
+    position: absolute;
+    top: 15px;
+    display: block;
+    height: 0;
+    width: 100%;
+    border-top: 1px dotted #ccc;
+}
+
+comments h4{
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    padding: 0 8px;
+    background-color: #f3f3f3;
+}
+
+comments h4,
+comments aside{
+    text-align: center;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+ul,
+li{
+    list-style: none;
+}
+
+.comments{
+    padding: 15px;
+}
+
+.comments li{
+    position: relative;
+    overflow: hidden;
+    padding: 0 0 15px 45px;
+    _zoom: 1;
+}
+
+.user-name,
+.user-praise{
+    line-height: 20px;
+    font-size: 14px;
+    color: #8c8c8c;
+}
+
+.user-name{
+    float: left;
+}
+
+.comments .user-praise{
+    float: right;
+    background-position-y: 3px;
+}
+
+.user-portrait{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    height: 35px;
+    width: 35px;
+    overflow: hidden;
+    border-radius: 3px 3px 3px 3px;
+    background-clip: padding-box;
+}
+
+.user-portrait img{
+    height: 35px;
+    width: 35px;
+}
+
+.comments div{
+    overflow: hidden;
+    clear: both;
+    font-size: 14px;
+    line-height: 22px;
+    color: #3e3e3e;
+    word-break: break-all;
+}
+
+.comments div img{
+    max-width: 100% !important;
+}
+
+time{
+    font-size: 12px;
+}
+
+notice{
+    display: block;
+    height: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #8c8c8c;
+}
+
+@media screen and (min-width: 1025px){
+    body{
+        padding: 20px 20px 0;
+        max-width: 700px;
+        background-color: #fff;
+        font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
+    }
+
+    header h2{
+        padding-bottom: 10px;
+        margin-bottom: 14px;
+        border-bottom: 1px solid #e7e7eb;
+    }
+
+    comments{
+        background-color: #f3f3f3;
+    }
+}

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<head lang="zh-cn">
+<script type="text/javascript">
+    var phoneScale = parseInt(window.screen.width)/640;
+    document.write('<meta name="viewport" content="width=640, minimum-scale = '+ phoneScale +', maximum-scale = '+ phoneScale +', target-densitydpi=device-dpi">');
+</script>
+<meta charset="gkb232">
+<title>装修写日记送全屋家电！</title>
+<meta name="Keywords" content="<?php echo $keyword;?>"/>
+<meta name="Description" content="在这分享装修经验，一大波礼品等着你领走！"/>
+
+<link rel="stylesheet" type="text/css" href="<?php echo ZT_CSS?>more.css?v=<?php echo time();?>">
+<link rel="stylesheet" type="text/css" href="<?php echo ZT_CSS?>sprite.css">
+<link rel="stylesheet" type="text/css" href="<?php echo ZT_CSS?>animate.min.css">
+<link rel="stylesheet" type="text/css" href="<?php echo ZT_CSS?>loaders.css">
+<!--
+<script type="text/javascript" src="<?php echo ZT_JS?>swiper.animate.min.js"></script>-->
+<script type="text/javascript" src="<?php echo ZT_JS?>swiper.min.js"></script>
+<script type="text/javascript" src="<?php echo ZT_JS?>jquery-1.7.2.min.js"></script>
+<!--<script type="text/javascript" src="<?php echo ZT_JS?>jquery.more.js"></script>-->
+<script type="text/javascript" src="http://st.xizi.com/xzmui/libs/zepto.min.js"></script>
+</head>
+<body>
+
+<div id="con">
+  <div id="title"></div>
+  <div id="main"><a href="http://plus.xizi.com/apply/2015/07/house/">返回</a></div>
+</div>
+
+<div class="swiper-container">
+
+	<div class="swiper-wrapper">
+
+		<!-- 作品 start -->
+		<div class="swiper-slide">
+			<div class="page4 page">
+			<div class="icon-title-bg">作品展示</div>
+				<div class="btn">
+					<span>目前已有<?php echo $count;?>人参赛</span>
+					<i></i>
+					<a href="<?php if(XIZI_UID){?>http://bbs.xizi.com/post.php?fid=83&special=13&dctype=1&pc=1<?php }else{?>http://my.xizi.com/index.php?r=members/login&t=<?php echo get_url();?><?php }?>">我要报名</a>
+				</div>
+				<div class="show_list" id="more">
+					<ul class="clearfix">
+						<?php foreach ($infos as $val) {?>
+						<li class="single_item">
+							<a href="http://bbs.xizi.com/thread-<?php echo $val['tid'];?>-1-1.html" target="_blank" title="<?php echo $val['subject'];?>"><img src="<?php echo $val['cover'] ? 'http://bbs.xizi.com/'.$val['cover'] : 'http://home.xizi.com/statics/images/diary/wait.jpg';?>"></a>
+							<div class="title"><a href="http://bbs.xizi.com/thread-<?php echo $val['tid'];?>-1-1.html" target="_blank" title="<?php echo $val['subject'];?>"><?php echo $val['subject'];?></a></div>
+							<div class="info">
+								<div class="comment"><a href="javascript:;"><?php echo $val['replies'];?></a></div>
+								<div class="view"><a href="javascript:;"><?php echo $val['hits'];?></a></div>
+								<!-- <div class="share">分享</div> -->
+							</div>
+						</li>
+						<?php }?>
+					</ul>
+				</div>
+				<div class="moreRead"><a href="javascript:;" onclick="view_pages();">加载更多作品</a></div>
+
+				<!-- 加载 -->
+				<div class="loader" style="text-align:center;display:none;">
+				    <div class="loader-inner ball-spin-fade-loader" style="display:inline;">
+				    	<div></div>
+				    	<div></div>
+				    	<div></div>
+				    	<div></div>
+					    <div></div>
+					    <div></div>
+					    <div></div>
+					    <div></div>
+				    </div>
+				    
+				</div>
+
+			</div>
+           
+		</div>
+        <!-- 作品 start -->
+        
+	</div>
+</div>
+
+<!-- 弹窗遮罩 start -->
+<div class="popover">
+	<div class="close-window"></div>
+    <ul>
+        <li class="weibo">新浪微博</li>
+        <li class="weixin">微信</li>
+        <li class="qq">QQ</li>
+        <li class="qqzone">QQ空间</li>
+    </ul>
+</div> 
+<div id="background"></div>
+<input type="hidden" value="2" id="page">
+
+<script>
+//点击加载
+function view_pages(tClick){
+	var page = parseInt($("#page").val()),str='',tt,k,
+	    sItem;
+	$('.loader').show();
+    $.getJSON("?a=ajax_pages&callback=?",{page : page},function(data){
+        for (var i = 0; i < data.html.length; i++) {
+        	if (data.html[i].cover=='') data.html[i].cover='http://home.xizi.com/statics/images/diary/wait.jpg';
+        	else data.html[i].cover='http://bbs.xizi.com/'+data.html[i].cover;
+        	str+='<li class="single_item"><a href="http://bbs.xizi.com/thread-';
+        	str+=data.html[i].tid+'-1-1.html" target="_blank" title="';
+        	str+=data.html[i].subject+'">';
+        	str+='<img src="'+data.html[i].cover+'"></a><div class="title"><a href="http://bbs.xizi.com/thread-';
+        	str+=data.html[i].tid+'-1-1.html" target="_blank" title="';
+        	str+=data.html[i].subject+'">'+data.html[i].subject;
+        	str+='</a></div><div class="info"><div class="comment">';
+        	str+=data.html[i].replies+'</div><div class="view">';
+        	str+=data.html[i].hits+'</div>';
+        	// str+='<div class="share">分享</div></div></li>';       	
+        	// tt.after(str);
+
+        };
+
+        sItem=$('.single_item');
+        k=sItem.length-1;
+        sItem.eq(k).after(str);
+		// console.log(page);    //测试页数
+		$('.loader').hide();
+
+    });
+
+        page++;
+        $("#page").val(page);
+
+}
+
+//滑动加载
+window.onload=function(){
+	var page = parseInt($("#page").val()),str='',tt,k,
+	    sItem,sign=0;
+	var currentPage=page;
+document.onscroll=function(){
+
+		var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;    //滚动条距离顶部的高度
+		var scrollHeight = $(document).height();    //当前页面的总高度
+		var windowHeight = document.documentElement.clientHeight;    //当前可视的页面高度
+		// console.log(scrollTop+'|'+scrollHeight+'|'+windowHeight);    //测试高度相关性
+    if(scrollTop + windowHeight + 10 >= scrollHeight && sign==0){    //距离顶部+当前高度 >=文档总
+	str='';sign=1;
+	$('.loader').show();
+   	$.getJSON("?a=ajax_pages&callback=?",{page : page},function(data){
+        for (var i = 0; i < data.html.length; i++) {
+        	if (data.html[i].cover=='') data.html[i].cover='http://home.xizi.com/statics/images/diary/wait.jpg';
+        	else data.html[i].cover='http://bbs.xizi.com/'+data.html[i].cover;
+        	str+='<li class="single_item"><a href="http://bbs.xizi.com/thread-';
+        	str+=data.html[i].tid+'-1-1.html" target="_blank" title="';
+        	str+=data.html[i].subject+'">';
+        	str+='<img src="'+data.html[i].cover+'"></a><div class="title"><a href="http://bbs.xizi.com/thread-';
+        	str+=data.html[i].tid+'-1-1.html" target="_blank" title="';
+        	str+=data.html[i].subject+'">'+data.html[i].subject;
+        	str+='</a></div><div class="info"><div class="comment">';
+        	str+=data.html[i].replies+'</div><div class="view">';
+        	str+=data.html[i].hits+'</div>';
+        	// str+='<div class="share">分享</div></div></li>';       	
+        	// tt.after(str);
+
+        };
+
+        sItem=$('.single_item');
+        k=sItem.length-1;
+        sItem.eq(k).after(str);
+        // console.log(page);    //测试页数
+        $('.loader').hide();
+
+        page++;
+        $("#page").val(page);
+        sign=0;
+    });
+
+    }
+};
+
+};
+
+</script>
+
+<script>
+ // $(function(){
+	//  //弹出框
+	// $( '.share' ).live( 'click', function() {
+	// 	var obj = $( '.popover' );
+	// 	dialog( obj );
+	// 	return false;
+	// } );
+
+	// //关闭框
+	// $( '.close-window' ).click( function () {
+	// 	$( this ).parent().fadeOut();
+	// 	$( '#background' ).hide();
+
+	// 	return false;
+	// } );
+	
+	// $( '#background' ).click( function () {
+	// 	$( '.close-window' ).click();
+	// } );
+	
+	// // 弹出框
+	// function dialog (obj) {
+	// 	obj.css( {
+	// 		left : ( $( window ).width() - obj.innerWidth() ) / 2,
+	// 		top : $( document ).scrollTop() + ( $( window ).height() - obj.height() ) / 2
+	// 	} ).fadeIn();
+	
+	// 	$( '#background' ).css( {
+	// 		opacity : 0.6,
+	// 		filter : 'Alpha(Opacity = 30)',
+	// 		'height' : $( document ).height()
+	// 	} ).show();
+	// }
+
+	//  });
+</script>
+<!-- 弹窗遮罩 end -->
+<script type="text/javascript">
+;(function($){
+
+  var moveX,moveY,startX,startY;
+  $(document).on("touchstart","#title",function(event){
+    if($(event.target).attr('id') == 'title'){
+      var touchPros = event.touches[0];
+      startX = touchPros.pageX - event.target.parentNode.offsetLeft;
+      startY = touchPros.pageY - event.target.parentNode.offsetTop;
+    }
+    return false;
+  }).on("touchmove","#title",function(event){
+    if($(event.target).attr('id') == 'title'){
+      var touchPros = event.touches[0];
+      moveX = touchPros.pageX - startX;
+      moveY = touchPros.pageY - startY;
+      $('#con').css('left',moveX).css('top',moveY);
+      }
+  });
+})(Zepto); 
+</script>
+
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript">
+    var imgUrl = "<?php echo ZT_IMAGES;?>logo.jpg";
+    var lineLink = "http://plus.xizi.com/apply/2015/07/house/";
+    var descContent = '在这分享装修经验，一大波礼品等着你领走！ ';
+    var shareTitle = '装修写日记送全屋家电！';
+
+    wx.config({
+        debug: false,
+        appId: '<?php echo $signPackage["appId"];?>',
+        timestamp: <?php echo $signPackage["timestamp"];?>,
+        nonceStr: '<?php echo $signPackage["nonceStr"];?>',
+        signature: '<?php echo $signPackage["signature"];?>',
+        jsApiList: [
+            //'checkJsApi',
+            'onMenuShareTimeline',
+            'onMenuShareAppMessage',
+            'showMenuItems'
+        ]
+    });
+    wx.ready(function () {
+// 2.1 监听“分享给朋友”，按钮点击、自定义分享内容及分享结果接口
+        wx.onMenuShareAppMessage({
+            title: shareTitle,
+            desc: descContent,
+            link:  lineLink,
+            imgUrl: imgUrl,
+            trigger: function (res) {
+                //alert('用户点击发送给朋友');
+            },
+            success: function (res) {
+                //alert('已分享给朋友');
+            },
+            cancel: function (res) {
+                //alert('已取消');
+            },
+            fail: function (res) {
+                alert(JSON.stringify(res));
+            }
+        });
+
+
+// 2.2 监听“分享到朋友圈”按钮点击、自定义分享内容及分享结果接口
+
+        wx.onMenuShareTimeline({
+            title: shareTitle,
+            link: lineLink,
+            imgUrl: imgUrl,
+            trigger: function (res) {
+                //alert('用户点击分享到朋友圈');
+            },
+            success: function (res) {
+                //alert('已分享朋友圈');
+            },
+            cancel: function (res) {
+                //alert('已取消');
+            },
+            fail: function (res) {
+                alert(JSON.stringify(res));
+            }
+        });
+
+        wx.showMenuItems({
+            menuList: [] // 要隐藏的菜单项，所有menu项见附录3
+        });
+    });
+
+    if (typeof WeixinJSBridge == "undefined"){
+        if( document.addEventListener ){
+            document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        }else if (document.attachEvent){
+            document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+            document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+        }
+    }else{
+        onBridgeReady();
+    }
+</script>
+</body>
+</html>

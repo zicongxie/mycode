@@ -1,0 +1,17 @@
+{
+  "name": "hangjia",
+  "version": "0.0.1",
+  "description": "hangjia",
+  "author": "xizi",
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp.spritesmith": "latest",
+    "gulp-uglify": "latest",
+    "gulp-sass": "~2.0.1",
+    "gulp-rename": "latest",
+    "merge-stream": "latest",
+    "spritesmith": "latest",
+    "gulp-cssmin": "~0.1.7",
+    "gulp-plumber": "latest"
+  }
+}

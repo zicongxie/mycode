@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.ind-o-msg{
+			height: 86px;
+			overflow: hidden;
+			border-radius: 10px; 
+			margin-bottom: 25px;
+			margin-top: 30px;
+			width: 100%;
+		}
+		.ind-msg{
+			width: 100%;
+			background: #fff;
+			height: 1500px;
+			border: 0;
+		}
+		.ind-msg p{
+			font-family: Microsoft YaHei;
+			font-size: 30px;
+			font-weight: 300;
+			color: #6a3906;
+			text-align: left;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			height: 86px;
+			line-height: 86px;
+			border: 0;
+			text-align:center;
+			margin:0;
+		}
+	</style>
+</head>
+<body>
+	<div class="ind-o-msg">
+	<div class="ind-msg" id="ind-msg">
+			<p style="background:#339933;">活动奖品多多，送完即止，快来参加吧！1</p>
+			<p style="background:#336666;">活动奖品多多，送完即止，快来参加吧！2</p>
+			<p style="background:#336699;">活动奖品多多，送完即止，快来参加吧！3</p>
+			<p style="background:#3366CC;">活动奖品多多，送完即止，快来参加吧！4</p>
+		</div>
+	</div>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+	function swiperY(config){
+		this.config=config;
+	}
+	swiperY.prototype.run=function(){
+		var Ttarget=$('#'+this.config.id+'');
+		if (Math.abs(parseInt(Ttarget.css('margin-top')))/this.config.step==(this.config.num))
+			Ttarget.css('margin-top',0);
+		var t=-this.config.step-Math.abs(parseInt(Ttarget.css('margin-top')))+'px';
+		Ttarget.animate({
+			'margin-top': t
+		});
+	};
+	swiperY.prototype.main=function(){
+		var Ttarget=$('#'+this.config.id+'');
+		 this.config.num=Ttarget.children().length;
+		var $this=this;
+		var Child=Ttarget.children();
+		 Ttarget.children().clone(true).appendTo(Ttarget);
+		setInterval(function(){
+			$this.run();
+		}, 2000);
+	}
+	var oSwiper=new swiperY({
+		'step': 86,
+		'id': 'ind-msg'
+	});
+	oSwiper.main();
+</script>
+</body>
+</html>

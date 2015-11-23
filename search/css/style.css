@@ -1,0 +1,150 @@
+body{
+	width: 640px;
+	margin: 0 auto;
+	background-color: #fff;
+}
+li{
+	list-style: none;
+}
+#top-title{
+	clear: both;
+	width: 185px;
+	height: 60px;
+	line-height: 60px;
+	color: #37acf4;
+	margin:30px 0 0 227px;
+	text-align: center;
+	border: 2px solid #37acf4;
+	-webkit-border-radius: 15px 15px 0px 0px; 
+	border-bottom: 0px;
+	font-size: 30px;
+}
+.top-hr-left{
+	position: relative;
+	float: left;
+	margin-top: 0px;
+	height: 2px;
+	width: 320px;
+    background: -webkit-linear-gradient(right, #37acf4 , #daf0fd); /* Safari 5.1 - 6.0 */
+
+}
+.top-hr-right{
+	position: relative;
+	float: left;
+	margin-top: 0px;
+	height: 2px;
+	width: 320px;
+	background: -webkit-linear-gradient(left, #37acf4 , #daf0fd); /* Safari 5.1 - 6.0 */
+}
+.main{
+	width: 616px;
+	height: auto;
+	padding: 6px 12px;
+}
+.main li{
+	float: left;
+	margin : 21px 50px;
+}
+.main span{
+	float: left;
+	width: 104px;
+	text-align: center;
+	margin-top: 20px;
+	color: #666666;
+	font-size: 26px;
+}
+.main li div{
+	-webkit-border-radius: 15px;
+	width: 100px;
+	height: 100px;
+}
+.f-movie{
+	background: #6588d7 url(../images/f-movie.png) no-repeat center;
+}
+.f-work{
+	background: #80c151 url(../images/f-work.png) no-repeat center;
+}
+.f-weather{
+	background: #11c1ea url(../images/f-weather.png) no-repeat center;
+}
+.x-circle{
+/* 	padding: 24px 21px 24px 21px; */
+	max-height: 100px;
+}
+.marry{
+	background: #f074a6 url(../images/marry.png) no-repeat center;
+}
+.f-trafic{
+	background: #ff8533 url(../images/f-trafic.png) no-repeat center;
+}
+.f-error{
+	background: #37acf4 url(../images/f-error.png) no-repeat center;
+}
+.f-doctor{
+	background: #b8a895 url(../images/f-doctor.png) no-repeat center;
+}
+.f-bus{
+	background: #fe525d url(../images/f-bus.png) no-repeat center;
+}
+.f-used{
+	background: #ea5b4b url(../images/f-used.png) no-repeat center;	
+}
+.f-house{
+	background: #0198d2 url(../images/f-house.png) no-repeat center;	
+}
+.f-decoration{
+    background: #019d96 url(../images/f-decoration.png) no-repeat center;
+}
+.f-car{
+	background: #3162ac url(../images/f-car.png) no-repeat center;	
+}
+
+
+.f-travel{
+	background: #3fc2e4 url(../images/f-travel.png) no-repeat center;	
+}
+.f-food{
+	background: #fb7931 url(../images/f-food.png) no-repeat center;	
+}
+.f-activity{
+	background: #f9b03d url(../images/f-activity.png) no-repeat center;	
+}
+
+
+/*吃喝玩乐*/
+#second-top-title{
+	clear: both;
+	float: left;
+	width: 185px;
+	height: 60px;
+	line-height: 60px;
+	color: #fb7931;
+	margin:50px 0 0 227px;
+	text-align: center;
+	border: 2px solid #fb7931;
+	-webkit-border-radius: 15px 15px 0px 0px; 
+	border-bottom: 0px;
+	font-size: 30px;
+}
+.second-top-hr-left{
+	position: relative;
+	float: left;
+	margin-top: 0px;
+	height: 2px;
+	width: 320px;
+    background: -webkit-linear-gradient(right, #fb7931 , #fee1d1); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(left, #fb7931, #fee1d1); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(left, #fb7931, #fee1d1); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to left,#fb7931, #fee1d1); /* 标准的语法（必须放在最后） */
+}
+.second-top-hr-right{
+	position: relative;
+	float: left;
+	margin-top: 0px;
+	height: 2px;
+	width: 320px;
+	background: -webkit-linear-gradient(left, #fb7931 , #fee1d1); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #fb7931, #fee1d1); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #fb7931, #fee1d1); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to right,#fb7931, #fee1d1); /* 标准的语法（必须放在最后） */
+}

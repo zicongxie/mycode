@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript">
+	var phoneScale = parseInt(window.screen.width)/640;
+	document.write('<meta name="viewport" content="width=640, minimum-scale = '+ phoneScale +', maximum-scale = '+ phoneScale +', target-densitydpi=device-dpi">');
+	</script>
+	<title>wap-house-index</title>
+	<link rel="stylesheet" href="http://st.xizi.com/xzmui/dist/xzmui.min.css">
+	<link rel="stylesheet" href="../static/css/style.css?v=<?php echo time(); ?>">
+	<script src="http://st.xizi.com/xzmui/libs/zepto.min.js"></script>
+	<script src="http://st.xizi.com/xzmui/dist/xzmui.min.js"></script>
+</head>
+<body>
+	<div class="ind-top hs-cl-white">
+		<div class="t-left">
+			<img src="../static/images/icon-date.png" alt="Loading">
+			<p>争霸时间<span class="hs-cl-warning">2015.7-12</span></p>
+		</div>
+		<div class="t-right">
+			<p>争霸作品<span class="hs-cl-warning">您的爱家</span></p>
+			<img src="../static/images/icon-work.png" alt="Loading">
+		</div>
+	</div>
+
+	<div class="ind-intro">
+		<ul>
+			<li><span class="hs-cl-warning">1</span><p> 和别人花一样的钱，装出样板房的效果</p></li>
+			<li><span class="hs-cl-warning">2</span><p> 参与一个活动，同事有可能获得两份
+大奖</p></li>
+			<li><span class="hs-cl-warning">3</span><p> 业主和装饰公司是团队关系，共同拿
+大奖</p></li>
+			<li><span class="hs-cl-warning">4</span><p> 霸赛获奖者还可获得施工装饰公司的特别奖励</p></li>
+			<li><span class="hs-cl-warning">5</span><p>“业主-装饰公司-西子家居” 三方微信互动小组，实时交流工地进展，监
+督工地实况，让装修真省心。</p></li>
+		</ul>
+	</div>
+	<div class="ind-prize">
+		<h3 class="prize-title">大赛奖品设置</h3>
+		<ul>
+			<li><p class="hs-cl-warning">最佳样板房装修冠军（1名）</p><p>价值约<span class="hs-cl-warning">5500元</span></p><p>油烟机+燃气灶&nbsp;（一套）</p></li>
+			<li><p class="hs-cl-pink">最佳样板房装修亚军（1名）</p><p>价值约<span class="hs-cl-warning">5000元</span></p><p>50英寸4K液晶电视（一台）</p></li>
+			<li><p class="hs-cl-success">最佳样板房装修季军（1名）</p><p>价值约<span class="hs-cl-warning">2500元</span></p><p>波轮洗衣机（一台）</p></li>
+			<li><p>网络投票最具人气奖（10名）</p><p>价值约<span class="hs-cl-warning">339元</span></p><p>微波炉（一台）</p></li>
+			<li><p>网络最受欢迎装饰公司（1名）</p><p>由西子家居颁发</p><p>荣誉奖牌</p></li>
+		</ul>
+	</div>
+
+	<div class="ind-sub">
+		<div class="title">30秒快速报名</div>
+		<form action="http://192.168.0.107/apply/2015/06/house/?a=ajax_sign&i=1" class="form">
+			<div class="form-control">
+				<label for="name" >您的姓名</label>
+				<input type="text" class="inp-text" placeholder="请填写您的姓名" data-null="请输入姓名" data-null="请输入姓名" data-type="*" name="info[name]">
+			</div>
+			<div class="form-control">
+				<label for="phone" >您的手机</label>
+				<input type="text" class="inp-text" placeholder="请填写您的手机" name="info[phone]" data-type="phone" data-null="请输入手机号码" data-error="手机号码格式错误">
+			</div>
+			<div class="form-control">
+				<label for="houseName" >小区名称</label>
+				<input type="text" class="inp-text" placeholder="请填写您的小区名" name="info[areaname]" data-type="*" data-null="请填写您的小区名">
+			</div>
+			<div class="form-control">
+				<label for="area" >楼盘面积</label>
+				<input type="text" class="inp-text" placeholder="请填写您的房子面积" data-type="/^[0-9]+([.]{1}[0-9]+){0,1}$/" name="info[userarea]" data-null="请填写房子面积" data-error="输入数据格式有误">
+				<p class="square-meter">㎡</p>
+			</div>
+			<div class="form-control hs-mt-30">
+				<input type="submit" class="btn btn-warning" value="预约参观">
+				<input type="submit" class="btn btn-info" value="报名参加">
+			</div>
+		</form>
+	</div>
+	<div class="ind-contact">
+		<p>咨询电话</p>
+		<p class="hs-cl-warning">400 0752 050转001</p>
+		<button class="btn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;拨打电话</button>
+	</div>
+	<div class="ind-list">
+		<div class="title">样板房案例浏览</div>
+		<div class="content">
+			<dl>
+				<div class="ui-slider ui-slider-title">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="../static/images/list-img-1.jpg"><div class="swiper-title"><span>中信水岸城</span><span>现代简约</span><span>156㎡</span><span>2222</span></div></div>
+						<div class="swiper-slide"><img src="../static/images/list-img-2.jpg"><div class="swiper-title"><span>中信水岸城</span><span>现代简约</span><span>156㎡</span><span>2222</span></div></div>
+						<div class="swiper-slide"><img src="../static/images/list-img-3.jpg"><div class="swiper-title"><span>中信水岸城</span><span>现代简约</span><span>156㎡</span><span>2222</span></div></div>
+					</div>
+				</div>
+			</dl>
+
+			<dl>
+				<div class="ui-slider ui-slider-title">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="../static/images/list-img-1.jpg"><div class="swiper-title"><span>中信水岸城</span><span>现代简约</span><span>156㎡</span><span>2222</span></div></div>
+						<div class="swiper-slide"><img src="../static/images/list-img-2.jpg"><div class="swiper-title"><span>中信水岸城</span><span>现代简约</span><span>156㎡</span><span>2222</span></div></div>
+						<div class="swiper-slide"><img src="../static/images/list-img-3.jpg"><div class="swiper-title"><span>中信水岸城</span><span>现代简约</span><span>156㎡</span><span>2222</span></div></div>
+					</div>
+				</div>
+			</dl>
+
+			<dl>
+				<div class="ui-slider ui-slider-title">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="../static/images/list-img-1.jpg"><div class="swiper-title"><span>中信水岸城</span><span>现代简约</span><span>156㎡</span><span>2222</span></div></div>
+						<div class="swiper-slide"><img src="../static/images/list-img-2.jpg"><div class="swiper-title"><span>中信水岸城</span><span>现代简约</span><span>156㎡</span><span>2222</span></div></div>
+						<div class="swiper-slide"><img src="../static/images/list-img-3.jpg"><div class="swiper-title"><span>中信水岸城</span><span>现代简约</span><span>156㎡</span><span>2222</span></div></div>
+					</div>
+				</div>
+			</dl>
+
+			<dl>
+				<div class="ui-slider ui-slider-title">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="../static/images/list-img-1.jpg"><div class="swiper-title"><span>中信水岸城</span><span>现代简约</span><span>156㎡</span><span>2222</span></div></div>
+						<div class="swiper-slide"><img src="../static/images/list-img-2.jpg"><div class="swiper-title"><span>中信水岸城</span><span>现代简约</span><span>156㎡</span><span>2222</span></div></div>
+						<div class="swiper-slide"><img src="../static/images/list-img-3.jpg"><div class="swiper-title"><span>中信水岸城</span><span>现代简约</span><span>156㎡</span><span>2222</span></div></div>
+					</div>
+				</div>
+			</dl>
+
+			<dl>
+				<div class="ui-slider ui-slider-title">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="../static/images/list-img-1.jpg"><div class="swiper-title"><span>中信水岸城</span><span>现代简约</span><span>156㎡</span><span>2222</span></div></div>
+						<div class="swiper-slide"><img src="../static/images/list-img-2.jpg"><div class="swiper-title"><span>中信水岸城</span><span>现代简约</span><span>156㎡</span><span>2222</span></div></div>
+						<div class="swiper-slide"><img src="../static/images/list-img-3.jpg"><div class="swiper-title"><span>中信水岸城</span><span>现代简约</span><span>156㎡</span><span>2222</span></div></div>
+					</div>
+				</div>
+			</dl>
+
+		</div>
+	</div>
+	<div class="ind-merchant">
+		<div class="title">服务商家介绍</div>
+		<div class="list">
+			<dl>
+				<dt><img src="../static/images/brand-1.png" alt="Loading"></dt>
+				<dd>
+					<p>惠州市蜗居装饰工程有限公司</p>
+					<p>电话：0752-2762520</p>
+					<p>
+					<span>地址:</span>
+					<span>河南岸演达大道曼哈顿广场1208室</span>
+					</p>
+				</dd>
+			</dl>
+			<dl>
+				<dt><img src="../static/images/brand-2.png" alt="Loading"></dt>
+				<dd>
+					<p>惠州市余工三星装饰设计工程有限公司</p>
+					<p>电话：400-0752-050 转 028</p>
+					<p>
+					<span>地址:</span>
+					<span>东平店桃子园53号达利商务中心505室</span>
+					</p>
+				</dd>
+			</dl>
+			<dl>
+				<dt><img src="../static/images/brand-3.png" alt="Loading"></dt>
+				<dd>
+					<p>惠州易百装饰设计工程有限公司</p>
+					<p>电话：0752-5787517</p>
+					<p>
+					<span>地址:</span>
+					<span>河南岸曼哈顿广场2416-2420室</span>
+					</p>
+				</dd>
+			</dl>
+			<dl>
+				<dt><img src="../static/images/brand-4.png" alt="Loading"></dt>
+				<dd>
+					<p>惠州华宁装饰设计有限公司</p>
+					<p>电话：0752-2666662</p>
+					<p>
+					<span>地址:</span>
+					<span>金山大道二桥西侧华宁装饰创意园</span>
+					</p>
+				</dd>
+			</dl>
+			<dl>
+				<dt><img src="../static/images/brand-5.png" alt="Loading"></dt>
+				<dd>
+					<p>惠州皇城装饰设计有限公司</p>
+					<p>电话：400-0752-050 转 019</p>
+					<p>
+					<span>地址:</span>
+					<span>河南岸演达大道19号汽车博览中心5层01</span>
+					</p>
+				</dd>
+			</dl>
+		</div>
+	</div>
+	<div class="ind-er-code">
+		<img src="../static/images/er-code.jpg" alt="Loading">
+		<p>微信号:home0752</p>
+		<p>和小编成为朋友，一起聊装修吧</p>
+	</div>
+	<script>
+		xzmui.validform(".form", {
+			beforeSubmit: function(form, params){
+				$.post('http://192.168.0.107/apply/2015/06/house/?a=ajax_sign&i=1',params,function(data){
+					data=JSON.parse(data);
+					console.log(data.error);
+				if (data.error == 0) {             //sub true
+					console.log('123');
+			 		var alertDialog = xzmui.dialog({
+					title: "报名成功",
+					content: "感谢你的报名，家居客服会尽快与您取得联系！"
+					});
+                    form[0].reset();
+                }else if(data.error == -2){        //sub false
+	 				var alertDialog = xzmui.dialog({
+					title: "报名失败！",
+					content: "请检查您的报名信息是否有误。"
+					});
+				 }
+					alertDialog.show();
+				});
+				
+				return false;
+			}
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+	<meta charset="UTF-8">
+	<title>MVC3</title>
+</head>
+<body>
+	<div ng-controller="CommonController">
+		<div ng-controller="Controller1">
+			<p>{{greeting.text}}</p>
+			<button ng-click="fun1()">fun1</button>
+			<button ng-click="commonFun()">CommonFn</button>
+		</div>
+		<div ng-controller="Controller2">
+			<p>{{greeting.text}}</p>
+			<button ng-click="fun2()">fun2</button>
+		</div>
+	</div>
+</body>
+<script src="js/angular-1.3.0.js"></script>
+<script>
+	function CommonController($scope){
+		 $scope.commonFun=function(){
+		 	alert('This is the common function!');
+		 };
+	}
+	function Controller1($scope){
+		$scope.greeting={
+			text:"I am the controller1"
+		};
+		$scope.fun1=function(){
+			alert('controller1');
+		};
+	}
+	function Controller2($scope){
+		$scope.greeting={
+			text:"I am the controller2"
+		};
+		$scope.fun2=function(){
+			alert('controller2');
+		};
+	}
+</script>
+</html>

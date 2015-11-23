@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>title</title>
+	<style>
+/*     div{
+    color: antiquewhite;
+    background: #000;
+		width: 50px;
+		height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+	#div1{
+		background: blue;
+	}
+	#div3{
+		background: green;
+	} */
+	*{
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-o-box-sizing:border-box;
+		-ms-box-sizing:border-box;
+		box-sizing: border-box;
+		margin:0;
+		padding:0;
+	}
+	body{
+		background:#333;
+		padding-top:20px;
+	}
+	.container{
+		width:750px;
+		min-height:800px;
+		background:rgba(0, 0, 0, .5);
+		color:#fff;
+		padding:20px 30px;
+		margin:0 auto;
+		border-radius:5px;
+		box-shadow:5px -10px 10px #888;
+	}
+	.container p{
+		height:25px;	
+		overflow:hidden;
+		text-overflow: ellipsis;
+		white-space:nowrap;
+		line-height:25px;
+		margin:0 auto;
+	}
+	.container .title{
+		font-size:20px;
+		font-family:Microsoft YaHei;
+		text-shadow: none;
+		line-height:35px;
+		height:35px;
+		text-shadow: 1px 1px 0px #ccc;
+	}
+	</style>
+</head>
+<body>
+	<div class="container" id="container">
+		<p class="title">This is layout box</p>
+	</div>
+	<!-- <div id="div1">1</div>
+	<div id="div2">2</div>
+	<div id="div3">3</div>
+	<div id="div4">4</div> -->
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script>
+/*	var id=123;
+	function test(){
+		console.log(this===window);
+	}
+	window.test();*/
+
+/*	var name=123;
+	var obj1=function(){
+		console.log(this.name);
+		console.log(this===window);
+		this.name=456;
+		return {
+			name:789
+		};
+
+	};
+	console.log(obj1().name);*/
+
+/*	var name=123;
+    function fun(){
+		console.log(this.name);
+		console.log(this===window);
+		this.name=456;
+		return {
+			name:789
+		};
+
+	};
+	console.log(fun().name);
+*/
+
+/*	var obj={
+		a:123,
+		b:function(){
+			console.log(this.a);
+		}
+	};
+
+	obj.b();    //123
+	var obj1=obj.b;
+	obj1();     //undefined
+	obj1.call(obj);  //123  传入obj
+	var a=456;
+	obj1();*/
+
+
+/*	var _$=function(id){
+		return document.getElementById(id);
+	};
+*/
+/*	console.log(_$('div1').nextElementSibling.id);*/
+
+	// console.log(this._$('div2'));
+	// var id=123;
+	/*window.onload=function(){
+		_$('div1').onmouseover=function(){
+			// _$('div2').style.display='none';
+			var id=456;
+		};
+		_$('div2').onmouseover=function(){
+			console.log(id);
+		};
+	}*/
+/*
+	var Obj=function(opts){
+		var defaults={
+			a:1,
+			b:2,
+			c:function(){
+				console.log(this.b);
+			}
+		};
+		this.opts=$.extend(defaults,opts);
+		this.d=this.opts.b*this.opts.b;
+		return this.init();
+	}
+	Obj.prototype={
+		init:function(){
+			this.opts.a+=5;
+			return this;
+		},
+		do:function(){
+			console.log(this.d);
+		}
+	};
+	var obj=new Obj({
+			a:5,
+			b:7
+		});
+	obj.do();
+	obj.opts.b=9;
+	obj.do();
+	console.log(window.Math.ceil(1.5));
+	console.log(obj);*/
+
+
+	// push
+
+/*
+	var a=Array();
+	a.push('a','b');
+	console.log(a);*/
+
+
+	// array:[]
+	// object:{}
+/*
+	var a=['a','b'];
+	a.push('c');
+	console.log(a);*/
+
+
+/*
+	var a={a:'a'};
+	Array.prototype.push.call(a,'c','d');
+	console.log(a[0],a.length,a,a.a);
+*/
+
+
+/*
+	var a='string';
+	Array.prototype.push.call(a,'c');
+	console.log(a);  //error :because a is defined of string type,so that it can not assign to read only property 'length'
+
+*/
+
+//push orgin code
+/*
+	function ArrayPush(){
+		var n=To_UNIT32(this.length) //被push对象的length
+		var m=%_Argumentslength();   //push 的参数个数
+		for (var i = 0; i < m; i++) {
+			this[i+n]=%_Arguments(i);   //复制元素
+		};
+		this.length=m+n;               //修正length属性值
+		return this.length;
+	}*/
+
+//function test(a){
+//   for(var i=0;i<5;i++){
+//        a++;
+//   }
+//    console.log(a);
+//}
+//test(5);
+
+
+// function test(callback){
+//     for(var i=0;i<20;i++){
+//         if(i==5){
+//             if(typeof callback === 'function'){
+// //                console.log(i);return;
+//                 callback(i);
+//             }
+//         }
+//     }
+// }
+//
+// test(function(j){
+//     console.log(j);
+// });
+
+//
+// document.getElementById=(function(func){
+// 	return function(){
+// 		return func.apply(document,arguments);
+// 	};
+// })(document.getElementById);
+// var getId=document.getElementById;
+// console.log(getId);
+/*
+  var func=(function(){
+		return function(){
+			console.log(arguments,this);
+		};
+	})('a','b');
+	// func.apply($('.div1'),['a','c']);
+	func();
+
+*/
+
+
+//layout
+var layout=(function($){
+		var layout=function(str){
+			var html;
+			if (typeof str==='object') {
+				for (var i = 0; i < str.length; i++) {
+					html='<p>'+str[i]+'</p>';
+					$('#container').append(html);
+				};
+			}else{
+				    html='<p>'+str+'</p>';
+				$('#container').append(html);
+			}
+		};
+		return layout;
+	})(jQuery);
+
+	var mulTable=(function(){
+		return function(maxNum){
+			if (maxNum<1 || maxNum==null) {
+				layout('option error');
+				return;
+			};
+			var tObj={},str;
+			for (var i = 1; i <= maxNum; i++) {
+				str='';
+				for (var j = 1; j <= i; j++) {
+					str+=j+'*'+i+'='+(i*j)+' ';
+					};		
+
+				Array.prototype.push.call(tObj,str);	
+			};
+			layout(tObj);
+		}
+	})();
+	mulTable(9);
+
+
+var a=1;
+layout(window.a)
+
+$(function(){
+	var a={a:1,b:2,c:3,d:4},b=Array();
+	for (var i = 0; i < 5; i++) {
+		Array.prototype.push.call(b,i);
+	}
+	$.each(b,function(i,t){
+		console.log(i,t);
+	});
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>
