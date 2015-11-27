@@ -98,7 +98,7 @@
 				})().setSrc('../statics/images/img-'+i+'.jpg');
 			}	
 		};*/
-		var myImg = (function(src){
+/*		var myImg = (function(src){
 		 	var Img = document.createElement('img');
 				Img.onload=function(){
 					console.log(Img.src+' has loaded');
@@ -115,9 +115,15 @@
 		var OImg = document.getElementsByTagName('img');
 		for(var i = 0, length1 = OImg.length; i < length1; i++){
 			 myImg().setImg(OImg[i]);
-		}
+		}*/
 
 
+		(function(){
+			return {
+				setSrc:funciton(src){
+				}
+			}
+		})();
 
 	</script>
 </body>

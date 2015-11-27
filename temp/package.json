@@ -1,0 +1,39 @@
+{
+  "name": "xzapp2015",
+  "version": "0.0.1",
+  "description": "xzapp2015",
+  "author": "xizi",
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp.spritesmith": "latest",
+    "gulp-uglify": "latest",
+    "gulp-sass": "~2.0.1",
+    "gulp-rename": "latest",
+    "merge-stream": "latest",
+    "spritesmith": "latest",
+    "gulp-cssmin": "~0.1.7",
+    "gulp-plumber": "latest"
+  },
+  "main": "gulpfile.js",
+  "dependencies": {
+    "fd-gulp-chinese2unicode": "^0.0.1",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-plumber": "^1.0.1",
+    "gulp-postcss": "^6.0.1",
+    "gulp-px2rem": "^1.0.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.4",
+    "gulp-uglify": "^1.5.1",
+    "gulp.spritesmith": "^6.0.0",
+    "merge-stream": "^1.0.0",
+    "postcss-px2rem": "^0.2.0",
+    "px2rem": "^0.4.2",
+    "spritesmith": "^3.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC"
+}
