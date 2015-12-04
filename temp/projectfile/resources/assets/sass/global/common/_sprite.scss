@@ -1,0 +1,114 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$ico-close-name: 'ico-close';
+$ico-close-x: 28px;
+$ico-close-y: 38px;
+$ico-close-offset-x: -28px;
+$ico-close-offset-y: -38px;
+$ico-close-width: 15px;
+$ico-close-height: 15px;
+$ico-close-total-width: 63px;
+$ico-close-total-height: 58px;
+$ico-close-image: '../images/wap/sprite.png?1449039090346';
+$ico-close: (28px, 38px, -28px, -38px, 15px, 15px, 63px, 58px, '../images/wap/sprite.png?1449039090346', 'ico-close', );
+$ico-location-name: 'ico-location';
+$ico-location-x: 0px;
+$ico-location-y: 38px;
+$ico-location-offset-x: 0px;
+$ico-location-offset-y: -38px;
+$ico-location-width: 18px;
+$ico-location-height: 20px;
+$ico-location-total-width: 63px;
+$ico-location-total-height: 58px;
+$ico-location-image: '../images/wap/sprite.png?1449039090346';
+$ico-location: (0px, 38px, 0px, -38px, 18px, 20px, 63px, 58px, '../images/wap/sprite.png?1449039090346', 'ico-location', );
+$ico-support-name: 'ico-support';
+$ico-support-x: 38px;
+$ico-support-y: 0px;
+$ico-support-offset-x: -38px;
+$ico-support-offset-y: 0px;
+$ico-support-width: 25px;
+$ico-support-height: 19px;
+$ico-support-total-width: 63px;
+$ico-support-total-height: 58px;
+$ico-support-image: '../images/wap/sprite.png?1449039090346';
+$ico-support: (38px, 0px, -38px, 0px, 25px, 19px, 63px, 58px, '../images/wap/sprite.png?1449039090346', 'ico-support', );
+$ico-turn-left-name: 'ico-turn-left';
+$ico-turn-left-x: 0px;
+$ico-turn-left-y: 0px;
+$ico-turn-left-offset-x: 0px;
+$ico-turn-left-offset-y: 0px;
+$ico-turn-left-width: 28px;
+$ico-turn-left-height: 28px;
+$ico-turn-left-total-width: 63px;
+$ico-turn-left-total-height: 58px;
+$ico-turn-left-image: '../images/wap/sprite.png?1449039090346';
+$ico-turn-left: (0px, 0px, 0px, 0px, 28px, 28px, 63px, 58px, '../images/wap/sprite.png?1449039090346', 'ico-turn-left', );
+$spritesheet-width: 63px;
+$spritesheet-height: 58px;
+$spritesheet-image: '../images/wap/sprite.png?1449039090346';
+$spritesheet-sprites: ($ico-close, $ico-location, $ico-support, $ico-turn-left, );
+$spritesheet: (63px, 58px, '../images/wap/sprite.png?1449039090346', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

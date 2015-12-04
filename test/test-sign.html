@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin:0;padding:0;box-sizing: border-box;}
+		body{
+			width:400px;
+			border:1px solid #ddd;
+			padding:20px;
+			margin:auto;
+			margin-top:100px;
+			position:relative;
+		}
+		.form{
+			width:100%;
+			position:relative;
+			transition:all .4s;
+		}
+		.input{
+			width:100%;
+			position:relative;
+			outline-color:#1cd646;
+		}
+		.cancel{
+			position:absolute;
+			right:0;
+			top:0;
+			width:60px;
+			display:none;
+
+		}
+		.active{padding-right:65px;}
+	</style>
+</head>
+<body>
+	<form class="form" action="">
+		<input type="text" class="input">
+		<button type="button" class="cancel">cancel</button>
+	</form>
+	
+	<script>
+		(function(window){
+			document.querySelector('input').onfocus=function(){
+				this.parentElement.className='form active';
+				var _this=this;
+				setTimeout(function(){
+					_this.parentElement.querySelector('.cancel').style.display='block';
+				}, 500);
+			};
+			document.querySelector('.cancel').onclick=function(){
+				this.style.display="none";
+				this.parentElement.className='form';
+			}
+		})(window);
+	</script>
+</body>
+</html>

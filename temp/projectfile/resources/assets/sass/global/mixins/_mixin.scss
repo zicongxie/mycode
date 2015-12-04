@@ -1,0 +1,105 @@
+@mixin px2px($name, $px){
+   //  #{$name}: $px * 1px;
+    #{$name}: round($px / 2) * 1px;/*no*/
+    [data-dpr="2"] & {
+        #{$name}: $px*1px; /*no*/
+    }
+    // for mx3
+    [data-dpr="2.5"] & {
+        #{$name}: round($px * 2.5 / 2) * 1px;/*no*/
+    }
+    // for 小米note
+    [data-dpr="2.75"] & {
+        #{$name}: round($px * 2.75 / 2) * 1px;/*no*/
+    }
+    [data-dpr="3"] & {
+        #{$name}: round($px / 2 * 3) * 1px;/*no*/
+    }
+    // for 三星note4
+    [data-dpr="4"] & {
+        #{$name}: $px * 2px;/*no*/
+    }
+}
+
+/*
+首先，目前视觉稿大小为640，750以及，1125这三种。
+1a = 7.5px
+1rem = 75px
+因此，对于视觉稿上的元素的尺寸换算，只需要原始px值除以rem基准px值即可。例如240px * 120px的元素，最后转换为3.2rem * 1.6rem。
+*/
+@mixin px2rem($name, $px){
+    #{$name}: $px / 64 * 1rem;
+}
+
+@mixin font-dpr($font-size){
+    font-size: $font-size;
+
+    [data-dpr="2"] & {
+        font-size: $font-size * 2;
+    }
+
+    [data-dpr="3"] & {
+        font-size: $font-size * 3;
+    }
+}
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin transition($args...) {
+	-webkit-transition: $args;
+	   -moz-transition: $args;
+	    -ms-transition: $args;
+	     -o-transition: $args;
+	        transition: $args;
+}
+
+@mixin transform($args...) {
+	-webkit-transform: $args;
+	   -moz-transform: $args;
+	    -ms-transform: $args;
+	     -o-transform: $args;
+	        transform: $args;
+}
+
+@mixin animation($args...) {
+	-webkit-animation: $args;
+	   -moz-animation: $args;
+	    -ms-animation: $args;
+	     -o-animation: $args;
+	        animation: $args;
+}
+
+
+/**
+|private mySprite
+|
+*/
+@mixin sprite-position-t($sprite) {
+    $spritesheet-w: nth($sprite, 7) - nth($sprite, 5);
+    $spritesheet-h: nth($sprite, 8) - nth($sprite, 6);
+    $sprite-offset-x-t: nth($sprite, 1) / $spritesheet-w * 100%;
+    $sprite-offset-y-t: nth($sprite, 2) / $spritesheet-h * 100%;
+    background-position: $sprite-offset-x-t  $sprite-offset-y-t;
+}
+@mixin sprite-size($sprite) {
+  background-size: nth($sprite, 7) nth($sprite, 8);
+}
+
+@mixin sprite-t($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position-t($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+  @include sprite-size($sprite);
+}
+@mixin mySprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite-t($sprite);
+    }
+  }
+}

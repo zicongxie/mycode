@@ -1,0 +1,231 @@
+@charset "UTF-8";
+html {
+  font-size: 100%; }
+
+body {
+  color: #222222;
+  max-width: 10.0rem;
+  margin: 0 auto; }
+
+.cl-success {
+  color: #46cda9; }
+
+/*
+首先，目前视觉稿大小为640，750以及，1125这三种。
+1a = 7.5px
+1rem = 75px
+因此，对于视觉稿上的元素的尺寸换算，只需要原始px值除以rem基准px值即可。例如240px * 120px的元素，最后转换为3.2rem * 1.6rem。
+*/
+.fn-head {
+  height: 88px;
+  line-height: 88px;
+  padding: 0 19px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  position: relative;
+  clear: both;
+  font-size: 16px;
+  /*no*/ }
+  [data-dpr="2"] .fn-head {
+    font-size: 32px;
+    /*no*/ }
+  [data-dpr="2.5"] .fn-head {
+    font-size: 40px;
+    /*no*/ }
+  [data-dpr="2.75"] .fn-head {
+    font-size: 44px;
+    /*no*/ }
+  [data-dpr="3"] .fn-head {
+    font-size: 48px;
+    /*no*/ }
+  [data-dpr="4"] .fn-head {
+    font-size: 64px;
+    /*no*/ }
+  .fn-head .fn-back {
+    background: url(../images/icon-left.png) left center no-repeat;
+    width: 19px;
+    height: 100%;
+    float: left; }
+
+/*topic*/
+.topic-main {
+  background: #eeeeee;
+  padding: 0.21875rem 0.234375rem;
+  min-height: 62.5rem; }
+
+.topic-main .top {
+  padding: 0.46875rem 0.3125rem;
+  background: #fff;
+  border-radius: 0.125rem; }
+
+.topic-main .top .head {
+  position: relative;
+  height: 1.0rem; }
+
+.topic-main .top .head .left {
+  float: left;
+  width: 1.0rem;
+  height: 1.0rem;
+  overflow: hidden;
+  border-radius: 0.546875rem; }
+
+.topic-main .top .head .left img {
+  width: 100%;
+  height: 100%; }
+
+.topic-main .top .head .right {
+  padding-left: 1.234375rem;
+  height: 1.0rem; }
+
+.topic-main .top .head .right p {
+  width: 7.796875rem;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.topic-main .top .head .right p:first-child {
+  height: 0.53125rem;
+  line-height: 0.53125rem;
+  color: #555;
+  font-size: 11px; }
+  [data-dpr="2"] .topic-main .top .head .right p:first-child {
+    font-size: 22px; }
+  [data-dpr="3"] .topic-main .top .head .right p:first-child {
+    font-size: 33px; }
+
+.topic-main .top .head .right p:last-child {
+  height: 0.484375rem;
+  line-height: 0.484375rem;
+  color: #aaa;
+  font-size: 9px; }
+  [data-dpr="2"] .topic-main .top .head .right p:last-child {
+    font-size: 18px; }
+  [data-dpr="3"] .topic-main .top .head .right p:last-child {
+    font-size: 27px; }
+
+.topic-main .top .title {
+  margin-top: 0.46875rem;
+  max-height: 1.5625rem;
+  line-height: 0.625rem;
+  overflow: hidden;
+  font-size: 14px; }
+  [data-dpr="2"] .topic-main .top .title {
+    font-size: 28px; }
+  [data-dpr="3"] .topic-main .top .title {
+    font-size: 42px; }
+
+.topic-main .top .img-list {
+  max-width: 100%;
+  overflow: hidden;
+  margin-top: 22px; }
+  .topic-main .top .img-list img {
+    display: block;
+    margin-bottom: 22px; }
+
+.ui-wrapper {
+  width: 100%;
+  background: #fff; }
+
+.ui-list {
+  border: 0; }
+
+.ui-form {
+  padding: 0 49px; }
+  .ui-form .ui-list-item {
+    padding: 0;
+    border-color: #eee;
+    line-height: 70px !important;
+    height: 70px !important;
+    margin-top: 17px; }
+    .ui-form .ui-list-item.first {
+      margin-top: 20px; }
+
+.ui-form-controls {
+  padding-left: 0;
+  line-height: 70px !important;
+  height: 70px !important; }
+  .ui-form-controls .ui-input-text {
+    line-height: 32px !important;
+    height: 70px !important;
+    font-size: 14px;
+    /*no*/ }
+    [data-dpr="2"] .ui-form-controls .ui-input-text {
+      font-size: 28px;
+      /*no*/ }
+    [data-dpr="2.5"] .ui-form-controls .ui-input-text {
+      font-size: 35px;
+      /*no*/ }
+    [data-dpr="2.75"] .ui-form-controls .ui-input-text {
+      font-size: 39px;
+      /*no*/ }
+    [data-dpr="3"] .ui-form-controls .ui-input-text {
+      font-size: 42px;
+      /*no*/ }
+    [data-dpr="4"] .ui-form-controls .ui-input-text {
+      font-size: 56px;
+      /*no*/ }
+
+.fn-form .btn-wrap {
+  margin-top: 40px; }
+  .fn-form .btn-wrap .ui-btn-warning {
+    background: #ffdd00;
+    border-color: #ffdd00;
+    color: #555;
+    height: 78px;
+    line-height: 78px;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
+    font-size: 15px;
+    /*no*/ }
+    [data-dpr="2"] .fn-form .btn-wrap .ui-btn-warning {
+      font-size: 30px;
+      /*no*/ }
+    [data-dpr="2.5"] .fn-form .btn-wrap .ui-btn-warning {
+      font-size: 38px;
+      /*no*/ }
+    [data-dpr="2.75"] .fn-form .btn-wrap .ui-btn-warning {
+      font-size: 41px;
+      /*no*/ }
+    [data-dpr="3"] .fn-form .btn-wrap .ui-btn-warning {
+      font-size: 45px;
+      /*no*/ }
+    [data-dpr="4"] .fn-form .btn-wrap .ui-btn-warning {
+      font-size: 60px;
+      /*no*/ }
+
+.code-list-item {
+  position: relative; }
+
+.fn-form .btn-getcode {
+  width: auto;
+  height: 52px;
+  line-height: 52px;
+  font-size: 11px;
+  /*no*/
+  color: #555;
+  border-color: #555;
+  border-width: 1px;
+  /*no*/
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  padding: 0 13px; }
+  [data-dpr="2"] .fn-form .btn-getcode {
+    font-size: 22px;
+    /*no*/ }
+  [data-dpr="2.5"] .fn-form .btn-getcode {
+    font-size: 28px;
+    /*no*/ }
+  [data-dpr="2.75"] .fn-form .btn-getcode {
+    font-size: 30px;
+    /*no*/ }
+  [data-dpr="3"] .fn-form .btn-getcode {
+    font-size: 33px;
+    /*no*/ }
+  [data-dpr="4"] .fn-form .btn-getcode {
+    font-size: 44px;
+    /*no*/ }
+  .fn-form .btn-getcode.btn-disabled {
+    color: #aaaaaa;
+    border-color: #aaaaaa; }

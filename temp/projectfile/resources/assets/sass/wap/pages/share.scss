@@ -1,0 +1,233 @@
+/*topic*/
+#topic_share{      //最外层选择器避免冲突  命名规则去模板名：topic_share.blade.php
+
+	.topic-main{
+		background: #eeeeee;
+		padding: 15px 15px 120px 15px;
+		.top{
+			padding: 25px 20px;
+			background: #fff;
+			border-radius: 8px;
+			position: relative;
+			.head{
+				position: relative;
+				height: 1.0rem;	
+				.left{
+					float: left;
+					width: 1.0rem;
+					height: 1.0rem;
+					overflow: hidden;
+					border-radius: 0.546875rem;
+					img{
+						width: 100%;
+						height: 100%;
+					}
+				}  
+				.right{
+					padding-left: 1.234375rem;
+					height: 1.0rem;
+					p{
+						width: 7.796875rem;
+						overflow: hidden;
+						text-overflow: ellipsis;
+					}
+					p:first-child{
+						height: 0.53125rem;
+						line-height: 0.53125rem;
+						color: #555;
+						@include px2px('font-size',22);
+					}
+					p:last-child{
+						height: 0.484375rem;
+						line-height: 0.484375rem;
+						color: #aaa;
+						@include px2px('font-size',18);
+					}
+				}
+			}
+			.title{
+				margin-top: 0.46875rem;
+				max-height: 1.5625rem;
+				line-height: 0.625rem;
+				overflow: hidden;
+				@include px2px('font-size',28);
+				span{
+					margin-right: 10px;
+				}
+			}
+			.img-list{
+				max-width: 100%;
+				overflow: hidden;
+				margin-top: 22px;
+				img{
+					display: block;
+					margin-bottom:22px;
+				}
+			}
+			.location{
+				@include px2px('font-size',22);
+				color: #ababab;
+				position: relative;
+				.ico-location{
+					position: absolute;
+					top: 4px;
+				}
+				p{
+					padding-left: 22px;
+					display: inline-block;
+					vertical-align: top; 
+					margin-left: 15px;
+					display: inline-block;
+					max-width: 635px;
+					line-height: 28px;/* px */
+				}
+			}		
+			.xiziquan-download{
+				width: 100%;
+				height: 90px;
+				padding: 12px;
+				padding-left: 89px;
+				background: rgba(255,255,255,.88) url('../images/wap/xiziquan.png') no-repeat 15px center;
+				background-size: 63px;
+				position: absolute;
+				bottom: 400px;
+				left: 0;
+				.content{
+					display: inline-block;
+					p{line-height: 35px;}
+					p:first-child{
+						// @include px2px('font-size',26);
+						font-size: 26px;
+					}
+					p:last-child{
+						// @include px2px('font-size',24);
+						font-size: 24px;
+					}
+				}
+				.btn-download{
+					display: inline-block;
+					position: absolute;
+					right: 12px;
+					top:0;
+					height: 90px;
+					line-height: 90px;
+					button{
+						background: #ffdd00;
+						text-align: center;
+						@include px2px('font-size',22);
+						// font-size: 22px;
+						width: 135px;
+						height: 50px;
+						border:1px solid #ffdd10;
+						border-radius: 6px;
+						margin-right: 25px;
+					}
+				}
+			}
+		}
+		.center{
+			width: 100%;
+			height: 112px;
+			background:#fff;
+			border-radius: 8px;
+			margin-top: 15px;
+			padding: 30px 20px;
+			font-size: 0;
+			position: relative;
+			.left{
+				display: inline-block;
+				width: 130px;
+				height: 55px;
+				border-radius: 28px;
+				background:#ffdd00;
+				color: #555;
+				font-size: 22px;
+				text-align: center;
+				line-height: 55px;
+				span{
+					margin-left: 15px;
+					vertical-align: middle;
+				}
+			}
+			.right{
+				display: inline-block;
+				position: absolute;
+				right: 20px;
+				white-space: nowrap;
+				span{
+					width: 50px;
+					height: 50px;
+					overflow: hidden;
+					border-radius: 26px;
+					text-align: center;
+					display:inline-block;
+					margin-left: 22px;
+					background: #222;
+					font-size: 22px;
+					color: #fff;
+					line-height: 50px;
+					white-space: nowrap;
+					vertical-align:middle; 
+					img{
+						max-width: 50px;
+					}
+				}
+			}
+		}
+		.bottom{
+			padding: 20px 20px 30px 20px;
+			background: #fff;
+			border-radius: 8px;
+			margin-top: 15px;
+			ul{
+				li{
+					font-size: 0;
+					margin: 18px 0;
+					.left{
+						display: inline-block;
+						vertical-align: top;
+						.head-img{
+							display: inline-block;
+							width: 65px;
+							height: 65px;
+							overflow: hidden;
+							border-radius: 35px;
+							img{
+								max-width: 65px;
+							}
+						}
+					}
+					.right{
+						display: inline-block;
+						margin-left: 25px;
+						@include px2px('font-size',26);
+						.title{
+							@include px2px('font-size',20);
+							color: #888;
+							line-height: 30px; /* px */
+							white-space: nowrap;
+							.time{
+								color: #ddd;
+								display: inline-block;
+								margin-left: 10px;
+							}
+						}
+						.content{
+							background: #f5f5f5;
+							border-radius: 8px;
+							max-width: 447px;
+							p{
+								color: #555;
+								padding: 20px;
+								line-height: 32px; /* px */
+							}
+						}
+					}
+				}
+			}
+		}
+	} 
+
+
+
+}

@@ -1,0 +1,28 @@
+html{font-size: 100%;}
+body{
+	color: #222222;
+	max-width: 10.0rem;
+	margin:0 auto;
+}
+*{
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+.cl-success{color: #46cda9;}
+.ico{display: inline-block;vertical-align:middle;}
+.fn-head{
+	height: 88px;
+	line-height: 88px;
+	padding: 0 19px;
+	border-bottom: 1px solid #ddd;
+	text-align: center;
+	position: relative;
+	clear: both;
+	@include px2px('font-size',32);
+	.fn-back{
+		width: 19px;
+		height: 100%;
+		position: absolute;
+		left: 19px;
+	}
+}
