@@ -41,7 +41,7 @@
 	</form>
 	
 	<script>
-		(function(window){
+		(function(){
 			document.querySelector('input').onfocus=function(){
 				this.parentElement.className='form active';
 				var _this=this;
@@ -53,7 +53,34 @@
 				this.style.display="none";
 				this.parentElement.className='form';
 			}
-		})(window);
+		})();
+
+/*		function fun(n,o){
+			console.log(o);
+			return{
+				fun:function(m){
+					return fun(m,n);
+				}
+			}
+		}
+		var a=fun(0);a.fun(1);a.fun(2);a.fun(3);
+		console.log(a);
+		var b=fun(0).fun(1).fun(2);
+		console.log(b);
+		var c=fun(0).fun(1);c.fun(2);c.fun(3);*/
+
+
+		var fn = (function(m){
+			var n=m+1;
+			return {
+				fn:function(){
+					console.log(n);
+					return n;
+				}
+			}
+		});
+		var o=new fn(1);
+		console.log(o);
 	</script>
 </body>
 </html>
