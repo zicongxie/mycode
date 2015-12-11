@@ -39,7 +39,8 @@
 		<input type="text" class="input">
 		<button type="button" class="cancel">cancel</button>
 	</form>
-	
+
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
 	<script>
 		(function(){
 			document.querySelector('input').onfocus=function(){
@@ -48,6 +49,7 @@
 				setTimeout(function(){
 					_this.parentElement.querySelector('.cancel').style.display='block';
 				}, 500);
+				console.log('input has been focused');
 			};
 			document.querySelector('.cancel').onclick=function(){
 				this.style.display="none";
@@ -81,6 +83,10 @@
 		});
 		var o=new fn(1);
 		console.log(o);
+
+
 	</script>
+
+	<script src="http://192.168.0.107:1337/vorlon.js"></script>
 </body>
 </html>

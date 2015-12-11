@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery HTML5 Fullscreen Slideshow / Gallery</title>
+    <link href="fullscreenstyle.css" type="text/css" rel="stylesheet"></link>
+    <link href="pagestyle.css" type="text/css" rel="stylesheet"></link>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="jquery.fullscreenslides.js"></script>
+    <script id="sample">
+    $(function(){
+      $('.image img').fullscreenslides();
+      var $container = $('#fullscreenSlideshowContainer');  
+      $container
+        .bind("init", function() { 
+          $container
+            .append('<div class="ui" id="fs-close">&times;</div>')
+            .append('<div class="ui" id="fs-loader">Loading...</div>')
+            .append('<div class="ui" id="fs-prev">&lt;</div>')
+            .append('<div class="ui" id="fs-next">&gt;</div>')
+            .append('<div class="ui" id="fs-caption"><span></span></div>');
+          $('#fs-prev').click(function(){
+            // You can trigger the transition to the previous slide
+            $container.trigger("prevSlide");
+          });
+          $('#fs-next').click(function(){
+            // You can trigger the transition to the next slide
+            $container.trigger("nextSlide");
+          });
+          $('#fs-close').click(function(){
+            // You can close the slide show like this:
+            $container.trigger("close");
+          });
+          
+        })
+        // When a slide starts to load this is called
+        .bind("startLoading", function() { 
+          // show spinner
+          $('#fs-loader').show();
+        })
+        // When a slide stops to load this is called:
+        .bind("stopLoading", function() { 
+          // hide spinner
+          $('#fs-loader').hide();
+        })
+        // When a slide is shown this is called.
+        // The "loading" events are triggered only once per slide.
+        // The "start" and "end" events are called every time.
+        // Notice the "slide" argument:
+        .bind("startOfSlide", function(event, slide) { 
+          // set and show caption
+          $('#fs-caption span').text(slide.title);
+          $('#fs-caption').show();
+        })
+        // before a slide is hidden this is called:
+        .bind("endOfSlide", function(event, slide) { 
+          $('#fs-caption').hide();
+        });
+    });
+    </script>
+  </head>
+  <body>
+    
+    <div class="wrapper">
+      
+      <div class="image">
+        <a rel="gallery" title="Broadway Tower in Cotswolds, England" href="http://upload.wikimedia.org/wikipedia/commons/c/cb/Broadway_tower_edit.jpg">12
+          <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Broadway_tower_edit.jpg/200px-Broadway_tower_edit.jpg">
+        </a>
+      </div>
+      
+      <div class="image">
+        <a rel="gallery" title="New York City at Night, HDR" href="http://upload.wikimedia.org/wikipedia/commons/thumb/2/22/New_York_City_at_night_HDR.jpg/1280px-New_York_City_at_night_HDR.jpg">
+          <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/2/22/New_York_City_at_night_HDR.jpg/200px-New_York_City_at_night_HDR.jpg">
+        </a>
+      </div>
+      
+      <div class="image">
+        <a rel="gallery" title="Red Squirrel with pronounced winter ear tufts" href="http://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Eichh%C3%B6rnchen_D%C3%BCsseldorf_Hofgarten_edit.jpg/1280px-Eichh%C3%B6rnchen_D%C3%BCsseldorf_Hofgarten_edit.jpg">
+          <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Eichh%C3%B6rnchen_D%C3%BCsseldorf_Hofgarten_edit.jpg/200px-Eichh%C3%B6rnchen_D%C3%BCsseldorf_Hofgarten_edit.jpg">
+        </a>
+      </div>  
+  
+
+    </div> 
+  </body>
+</html>
