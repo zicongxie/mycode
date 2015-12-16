@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../../build/react.js"></script>
+    <script src="../../build/JSXTransformer.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/jsx">
+    var people=[
+        {name:'Jojo',message:'I am Jojo'},
+        {name:'Lucy',message:'I am Lucy'},
+        {name:'Mary',message:'I am Mary'},
+        {name:'Make',message:'I am Make'},
+        {name:'June',message:'I am June'},
+        {name:'Lily',message:'I am Lily'}
+    ]
+    var Card=React.createClass({
+        render:function(){
+            return (
+                <div>
+                    <h1>{this.props.name}</h1>
+                    <p>{this.props.message}</p>
+                    <button onClick={this.props.onClick}>Delete me</button>
+                    <hr/>
+                </div>
+            )
+        }
+    })
+    var App = React.createClass({
+        getInitialState:function(){
+            return {
+                people:this.props.people
+            }
+        },
+        deletePerson:function(person){
+            this.state.people.splice(this.state.people.indexOf(person),1);
+            this.setState({people:this.state.people});
+        },
+        render:function(){
+            var that=this;
+            return(
+                <div>
+                    {this.state.people.map(function(person){
+                        return(
+                            <Card name={person.name} message={person.message} onClick={that.deletePerson.bind(null,person)}></Card>
+                        )
+                    })}                    
+                </div>
+            )
+        }
+    })
+    React.render(<App people={people}></App>,document.getElementById('example'));
+    </script>
+  </body>
+</html>
